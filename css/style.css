@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam', sans-serif;
+    background-color: #FDF8FA;
+    color: #21181B;
+}
+
+/* Header - Nav Buttons */
+
+header {
+    height: 4rem;
+    font-family: 'Zain', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #F2AEC7;
+    padding: 20px 30px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+  
+nav ul li {
+    margin-left: 20px; 
+}
+
+nav ul li a {
+    color: #F2AEC7;
+    text-decoration: none;
+}
+
+/* Home Page - Info Block */
+
+.home-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 4rem); 
+    padding: 0 30px; 
+    gap: 20px; 
+}
+
+.text-block {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    max-width: 600px; 
+    line-height: 2rem;
+}
+
+.text-block h1 {
+    font-family: 'Zain', serif;
+    color: #F2AEC7;
+    font-size: 32px;
+}
+
+.text-block h2 {
+    font-family: 'Zain', serif;
+    font-size: 16px;
+}
+
+.text-block p {
+    line-height: normal;
+    font-size: 14px;
+}
+
+.picture-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    position: relative;
+}
+
+.picture-frame {
+    position: relative;
+    padding: 10px;
+}
+
+.picture-frame::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 0;
+    border-top: 3px solid pink;
+    border-left: 3px solid pink;
+    left: 0;
+    border-top-left-radius: 15px;
+    z-index: -1;
+}
+
+.picture-frame img {
+    width: 200px;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+}
+
+.nav-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    right: 30px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 1000; 
+    align-items: center;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #F2AEC7;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    width: 12px;
+    height: 12px;
+    background: none;
+    border: 2px solid #F2AEC7;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
