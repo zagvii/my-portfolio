@@ -1,6 +1,6 @@
 // Seleciona todas as bolinhas e as seções correspondentes
 const dots = document.querySelectorAll('.dot');
-const sections = document.querySelectorAll('.home-page, .second-page');
+const sections = document.querySelectorAll('.home-page, .second-page, .about-me-page');
 
 // Atualiza a bolinha ativa com base na rolagem
 function updateActiveDot() {
