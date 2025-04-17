@@ -1,6 +1,6 @@
 // Seleciona todas as bolinhas e as seções correspondentes
 const dots = document.querySelectorAll('.dot');
-const sections = document.querySelectorAll('.home-page, .second-page, .about-me-page');
+const sections = document.querySelectorAll('.home-page, .about-me-section, .education-section, .experiences-section');
 
 // Atualiza a bolinha ativa com base na rolagem
 function updateActiveDot() {
@@ -28,3 +28,29 @@ window.addEventListener('scroll', updateActiveDot);
 
 // Executa a função ao carregar a página para marcar a seção inicial
 updateActiveDot();
+
+fetch('assets/education.xlsx') // ou 'assets/education.csv'
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+        const workbook = XLSX.read(buffer, { type: "array" });
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const data = XLSX.utils.sheet_to_json(sheet); // transforma em array de objetos
+
+        const container = document.querySelector('.education-list');
+
+        data.forEach(entry => {
+        const item = document.createElement('li');
+        item.classList.add('education-item');
+
+        item.innerHTML = `
+            <div class="top-line">
+            <h2 class="major">${entry.Major}</h2>
+            <span class="time">${entry.Time}</span>
+            </div>
+            <p class="school">${entry.School}</p>
+        `;
+
+        container.appendChild(item);
+        });
+    })
+    .catch(err => console.error("Erro ao carregar planilha:", err));

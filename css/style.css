@@ -2,32 +2,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #FDF8FA;
 }
 
 body {
     font-family: 'Be Vietnam', sans-serif;
-    background-color: #FDF8FA;
     color: #21181B;
+}
+
+html {
+    scroll-padding-top: 6rem; /* corrige rolagem com header fixo */
 }
 
 /* Header - Nav Buttons */
 
 header {
-    height: 4rem;
+    height: 3rem;
     font-family: 'Zain', serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #F2AEC7;
-    padding: 20px 30px;
+    padding: 20px 20px;
     display: flex; 
     justify-content: space-between;
     align-items: center; 
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #FDF8FA;
     z-index: 1000;
+    border-bottom: 1px solid #21181B;
 }
 
 nav ul {
@@ -50,8 +52,8 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: calc(100vh - 4rem); 
-    padding: 0 30px; 
+    height: 100vh; 
+    padding: 6rem 30px 2rem;
     gap: 20px; 
 }
 
@@ -60,14 +62,15 @@ nav ul li a {
     flex-direction: column; 
     align-items: flex-start; 
     max-width: 600px; 
-    line-height: 2rem;
+    line-height: 2.5rem;
 }
 
 .text-block h1 {
     font-family: 'Zain', serif;
+    font-size: 56px;
     color: #F2AEC7;
-    font-size: 40px;
 }
+
 
 .text-block h2 {
     font-family: 'Zain', serif;
@@ -114,8 +117,9 @@ nav ul li a {
 
 /* About Me Page */
 
-.about-me-page {
+.about-me-section, .education-section, .experiences-section {
     padding: 40px 30px;
+    max-height: 70vh; 
 }
 
 .section-title {
@@ -155,7 +159,7 @@ nav ul li a {
 }
 
 .image-with-lines button {
-    background-color: #F2AEC7;
+    background-color: #A25378;
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -173,13 +177,13 @@ nav ul li a {
     padding: 15px 0;
 }
 
-/* Lado direito */
+
 .text-and-info {
     max-width: 80%;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 .text-and-info p {
@@ -223,13 +227,139 @@ nav ul li a {
     color: #F2AEC7;  /* se quiser deixar a bolinha rosa */
 }
 
+.education-columns-container {
+    padding: 0 40px 0 0;
+}
+  
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.education-item {
+    display: flex;
+    flex-direction: column;
+}
+  
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 25px;
+}
+  
+.major {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Zain', serif;
+}
+  
+.time {
+    font-size: 16px;
+    color: #888;
+}
+  
+.school {
+    font-size: 15px;
+    color: #bbb;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #F2AEC7;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -28.5px;
+    top: 10px;
+    width: 14px;
+    height: 14px;
+    background-color: #F2AEC7;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #F2AEC7;
+  }
+  
+  .timeline-content {
+    padding-left: 10px;
+  }
+  
+  .timeline-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #111;
+  }
+  
+  .timeline-description {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+  }
+
+  .footer {
+    background-color: #F2AEC7;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-link img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* deixa o ícone branco */
+  }
+  
+  .social-link:hover {
+    opacity: 0.8;
+  }
+    
+
 .nav-indicator {
     display: flex;
     flex-direction: column;
     gap: 10px;
     position: fixed;
     right: 30px; 
-    top: 50%; 
+    top: 45%; 
     transform: translateY(-50%);
     z-index: 1000; 
     align-items: center;
