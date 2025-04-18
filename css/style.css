@@ -1,5 +1,6 @@
 :root {
     --redMainColor: #BE1A32; 
+    --darkRedColor: #780313; 
     --blackFontColor: #0F0002; 
     --backgroundColor: #EDE9E7;
 }
@@ -198,7 +199,7 @@ header .circle-header {
 
 .about-me-section, .education-section, .experiences-section {
     padding: 40px 30px;
-    max-height: 70vh; 
+    max-height: 100%; 
 }
 
 .section-title {
@@ -206,7 +207,7 @@ header .circle-header {
     font-size: 2rem;
     margin-bottom: 30px;
     font-family: 'Zain', serif;
-    color: #F2AEC7;
+    color: var(--redMainColor); 
 }
 
 .image-text-block {
@@ -214,7 +215,6 @@ header .circle-header {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap; 
-    padding: 0 50px;
 }
 
 .image-with-lines {
@@ -238,7 +238,7 @@ header .circle-header {
 }
 
 .image-with-lines button {
-    background-color: #A25378;
+    background-color: var(--redMainColor); 
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -246,7 +246,7 @@ header .circle-header {
 }
 
 .image-with-lines button:hover {
-    background-color: #ed8db0;
+    background-color: var(--darkRedColor);
 }
 
 .text-content {
@@ -255,7 +255,6 @@ header .circle-header {
     line-height: 1.6;
     padding: 15px 0;
 }
-
 
 .text-and-info {
     max-width: 80%;
@@ -267,8 +266,6 @@ header .circle-header {
 
 .text-and-info p {
     font-size: 16px;
-    line-height: 1.6;
-    color: #333;
 }
 
 /* Bloco com colunas */
@@ -279,7 +276,7 @@ header .circle-header {
 
 .info-title {
     font-size: 1.5rem;
-    color: #F2AEC7;
+    color: var(--redMainColor); 
     font-family: 'Zain', serif;
     text-align: left;
 }
@@ -289,22 +286,28 @@ header .circle-header {
     justify-content: space-between;
     gap: 60px;
     flex-wrap: wrap;
-    border-left: 2px solid #F2AEC7;
-    border-bottom: 2px solid #F2AEC7;
+    border-left: 2px solid var(--redMainColor); 
+    border-bottom: 2px solid var(--redMainColor); 
     padding: 0 30px 10px 30px;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     font-size: 16px;
-    color: #333;
+    text-align: justify;
 }
 
 .column li::marker {
-    font-size: 15px; /* bolinha menor */
-    color: #F2AEC7;  /* se quiser deixar a bolinha rosa */
+    font-size: 15px; 
+    color: var(--redMainColor);
+}
+
+/* Education Section */
+
+.education-section {
+    background-color: var(--redMainColor);
 }
 
 .education-columns-container {
