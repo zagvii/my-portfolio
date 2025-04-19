@@ -186,14 +186,7 @@ header .circle-header {
     gap: 10px;
     font-weight: bold;
 }
-  
-.section-divider::before,
-.section-divider::after {
-    content: "";
-    height: 1px;
-    background-color: var(--redMainColor);
-    width: 20px;
-}
+
   
 /* About Me Page */
 
@@ -364,70 +357,81 @@ header .circle-header {
     color: #bbb;
 }
 
+/* Job Experiences Timeline */
+
 .timeline {
     position: relative;
     padding-left: 30px;
-  }
+}
+
+.timeline li {
+    list-style-type: none;
+}
   
-  .timeline::before {
+.timeline::before {
     content: "";
     position: absolute;
     left: 7px;
     top: 0;
     bottom: 0;
     width: 3px;
-    background-color: #F2AEC7;
-  }
+    background-color: var(--redMainColor); 
+}
   
-  .timeline-item {
+.timeline-item {
     position: relative;
     margin-bottom: 50px;
-  }
+}
   
-  .timeline-dot {
+.timeline-dot {
     position: absolute;
     left: -28.5px;
     top: 10px;
     width: 14px;
     height: 14px;
-    background-color: #F2AEC7;
+    background-color: var(--redMainColor); 
     border-radius: 50%;
     border: 2px solid white;
-    box-shadow: 0 0 0 2px #F2AEC7;
-  }
+    box-shadow: 0 0 0 2px var(--redMainColor); 
+}
   
-  .timeline-content {
+.timeline-content {
     padding-left: 10px;
-  }
+}
   
-  .timeline-title {
-    font-size: 20px;
-    font-weight: bold;
+.timeline-title {
+    font-size: 28px;
+    line-height: 30px;
     margin-bottom: 5px;
-    color: #111;
-  }
+    font-weight: bold;
+    color: var(--blackFontColor);
+    font-family: 'Zain', serif;
+}
   
-  .timeline-description {
+.timeline-description {
     font-size: 16px;
     color: #666;
-    max-width: 600px;
-  }
+    max-width: 90%;
+    text-align: justify;
+}
 
-  .footer {
-    background-color: #F2AEC7;
+/* Footer */
+
+.footer {
+    background-color: var(--redMainColor); 
     padding: 10px 0;
     text-align: center;
-  }
+}
   
-  .socials {
+.socials {
     display: flex;
     justify-content: center;
     gap: 40px;
     align-items: center;
     flex-wrap: wrap;
-  }
+}
   
-  .social-link {
+.social-link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -435,18 +439,19 @@ header .circle-header {
     text-decoration: none;
     font-size: 15px;
     transition: opacity 0.3s ease;
-  }
+}
   
-  .social-link img {
+.social-link img {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1); /* deixa o ícone branco */
-  }
+    filter: brightness(0) invert(1);
+}
   
-  .social-link:hover {
+.social-link:hover {
     opacity: 0.8;
-  }
+}
     
+/* Nav Circles (Not used anymore) */
 
 .nav-indicator {
     display: flex;

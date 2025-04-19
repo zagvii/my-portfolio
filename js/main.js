@@ -29,12 +29,12 @@
 // Executa a função ao carregar a página para marcar a seção inicial
 // updateActiveDot();
 
-fetch('assets/education.xlsx') // ou 'assets/education.csv'
+fetch('assets/education.xlsx')
 .then(res => res.arrayBuffer())
     .then(buffer => {
         const workbook = XLSX.read(buffer, { type: "array" });
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
-        const data = XLSX.utils.sheet_to_json(sheet); // transforma em array de objetos
+        const data = XLSX.utils.sheet_to_json(sheet); 
 
         const container = document.querySelector('.education-list');
 
@@ -50,6 +50,31 @@ fetch('assets/education.xlsx') // ou 'assets/education.csv'
                 </div>
                 <p class="school">${entry.School}</p>
             `;
+
+            container.appendChild(item);
+        });
+    })
+.catch(err => console.error("Erro ao carregar planilha:", err));
+
+fetch('assets/experiences.xlsx')
+.then(res => res.arrayBuffer())
+    .then(buffer => {
+        const workbook = XLSX.read(buffer, {type: "array"});
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const data = XLSX.utils.sheet_to_json(sheet);  
+
+        const container = document.querySelector('.timeline');
+
+        data.forEach(entry => {
+            const item = document.createElement('li');
+
+            item.innerHTML = `<div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">${entry.Time} | ${entry.Title}</h3>
+                                    <p class="timeline-description">${entry.Description}</p>
+                                </div>
+                            </div>`;
 
             container.appendChild(item);
         });
