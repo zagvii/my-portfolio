@@ -45,6 +45,7 @@ fetch('assets/education.xlsx') // ou 'assets/education.csv'
             item.innerHTML = `
                 <div class="top-line">
                 <h2 class="major">${entry.Major}</h2>
+                <div class="line"></div>
                 <span class="time">${entry.Time}</span>
                 </div>
                 <p class="school">${entry.School}</p>

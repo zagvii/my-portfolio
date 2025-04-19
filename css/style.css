@@ -310,6 +310,10 @@ header .circle-header {
     background-color: var(--redMainColor);
 }
 
+.education-section .section-title {
+    color: white;
+}
+
 .education-columns-container {
     padding: 0 40px 0 0;
 }
@@ -331,20 +335,28 @@ header .circle-header {
 .top-line {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     line-height: 25px;
+    color: white;
+    gap: 8px
+}
+
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
 }
   
 .major {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: normal;
     margin: 0;
     font-family: 'Zain', serif;
 }
   
 .time {
     font-size: 16px;
-    color: #888;
 }
   
 .school {
