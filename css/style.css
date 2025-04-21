@@ -299,16 +299,37 @@ header .circle-header {
 
 /* Education Section */
 
+.education-section, .experiences-section {
+    margin: 30px 0px;
+}
+
+.cherry-top-right,
+.cherry-bottom-left {
+    position: absolute;
+    width: 60px; 
+    height: auto;
+    z-index: 1;
+}
+
 .education-section {
     background-color: var(--redMainColor);
+    position: relative; 
+    overflow: visible;
+    padding-bottom: 50px;
+}
+
+.cherry-top-right {
+    top: -30px; 
+    right: 0px;
+}
+
+.cherry-bottom-left {
+    bottom: -30px;
+    left: 0px;
 }
 
 .education-section .section-title {
     color: white;
-}
-
-.education-columns-container {
-    padding: 0 40px 0 0;
 }
   
 .education-list {
@@ -324,34 +345,47 @@ header .circle-header {
     display: flex;
     flex-direction: column;
 }
-  
+
 .top-line {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    line-height: 25px;
+    gap: 8px; 
+    flex-wrap: wrap; 
     color: white;
-    gap: 8px
+    line-height: 25px;
+    font-weight: 500 !important;
 }
-
-
+  
+.line-with-heart {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 120px;
+}
+  
 .line {
     flex-grow: 1;
     height: 1px;
-    background-color: #ccc;
+    background-color: white;
+}
+  
+.heart {
+    margin: 0 8px;
 }
   
 .major {
-    font-size: 25px;
-    font-weight: normal;
-    margin: 0;
-    font-family: 'Zain', serif;
+    white-space: nowrap;
+    font-size: 1rem;
+    flex-shrink: 0;
+    font-weight: 500 !important;
 }
   
 .time {
-    font-size: 16px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    flex-shrink: 0;
 }
-  
+   
 .school {
     font-size: 15px;
     color: #bbb;
