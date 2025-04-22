@@ -1,95 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mirian's Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;300;400;700&family=Zain&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/cherry-icon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;300;400;700&family=Zain&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="assets/cherry-icon.png" alt="cherry-icon">
-        <nav>
-            <ul>
-            <li><a href="#">ABOUT ME</a></li>
-            <li><a href="#">EDUCATION</a></li>
-            <li style="display: none;"><a href="#">PROJECTS</a></li>
-            <li><a href="#">JOB EXPERIENCES</a></li>
-            </ul>
-        </nav>
-        <div class="circle-header">MVM</div>
+      <img src="assets/cherry-icon.png" alt="cherry-icon" />
+      <nav>
+        <ul>
+          <li><a href="#about-me-section">ABOUT ME</a></li>
+          <li><a href="#education-section">EDUCATION</a></li>
+          <li style="display: none"><a href="#">PROJECTS</a></li>
+          <li><a href="#experiences-section">JOB EXPERIENCES</a></li>
+        </ul>
+      </nav>
+      <div class="circle-header">MVM</div>
     </header>
 
     <main>
-        <section class="home-page">
-            <div class="text-block">
-                <h1>‧₊˚ ཐི⋆ Hi, I'm <span class="name">Mirian</span> ⋆ཋྀ ˚₊‧</h1>
-                <p>Hi, there! My name is Mirian Moreira and I’m a Full Stack Developer based in Latin America. I’m very passionate in Front-end Development and I love creating sophisticated and efficient Web Designs.</p>
+      <section class="home-page">
+        <div class="text-block">
+          <h1>Hi, I'm <span class="name">Mirian</span></h1>
+          <p>
+            Hi, there! My name is Mirian Moreira and I’m a Full Stack Developer
+            based in Latin America. I’m very passionate in Front-end Development
+            and I love creating sophisticated and efficient Web Designs.
+          </p>
+        </div>
+        <div class="picture-block">
+          <div class="picture-frame">
+            <img src="assets/profile-picture.jpg" alt="profile-picture" />
+            <img
+              class="cherry-icon"
+              src="assets/cherry-icon.png"
+              alt="cherry-icon"
+            />
+          </div>
+        </div>
+      </section>
+      <div class="section-divider">─•°.-ˏˋ✧ˊˎ-.°•─</div>
+      <section id="about-me-section" class="about-me-section">
+        <h2 class="section-title">✩｡*•. About Me .•*｡✩</h2>
+        <div class="image-text-block">
+          <div class="image-with-lines">
+            <div class="picture-frame">
+              <img src="assets/profile-picture-mini.jpeg" alt="Minha Foto" />
             </div>
-            <div class="picture-block">
-                <div class="picture-frame">
-                    <img src="/assets/profile-picture.jpg" alt="profile-picture">
-                    <img class="cherry-icon" src="/assets/cherry-icon.png" alt="cherry-icon">
-                </div>
+            <p>RS, Brazil</p>
+            <p>mirian.vieira.moreira@gmail.com</p>
+            <a href="assets/Mirian-Resume.pdf" download class="resume-button">MY RESUME</a>
+          </div>
+
+          <div class="text-and-info">
+            <div class="text-content">
+              <p>
+                Systems Development Technician, graduated from the Federal
+                Institute of Education, Science and Technology of Rio Grande do
+                Sul - Canoas Campus. I have knowledge in different areas of
+                Technology, with emphasis on Web Development and Database. Skill
+                and experience in planning, managing and developing long and
+                complex projects. Learning and ability to adapt quickly to new
+                challenges and independence in project management.
+              </p>
             </div>
-        </section>
-        <div class="section-divider">─•°.-ˏˋ✧ˊˎ-.°•─</div>
-        <section class="about-me-section">
-            <h2 class="section-title">✩｡*•. About Me .•*｡✩</h2>
-            <div class="image-text-block">
-                <div class="image-with-lines">
-                    <img src="assets/profile-picture-mini.jpeg" alt="Minha Foto" />
-                    <p>RS, Brazil</p>
-                    <p>mirian.vieira.moreira@gmail.com</p>
-                    <button>MY RESUME</button>
-                </div>
-                <div class="text-and-info">
-                    <p>Systems Development Technician, graduated from the Federal Institute of Education, Science and Technology of Rio Grande do Sul - Canoas Campus. I have knowledge in different areas of Technology, with emphasis on Web Development and Database. Skill and experience in planning, managing and developing long and complex projects. Learning and ability to adapt quickly to new challenges and independence in project management.</p>
-              
-                    <div class="info-block">
-                        <h3 class="info-title">Skills Set</h3>
-                        <div class="columns-container">
-                            <ul class="column">
-                                <li>HTML/CSS</li>
-                                <li>PHP</li>
-                                <li>SQL</li>
-                                <li>JavaScript</li>
-                            </ul>
-                            <ul class="column">
-                                <li>C</li>
-                                <li>API Rest</li>
-                                <li>Relational Database</li>
-                                <li>Canva</li>
-                            </ul>
-                            <ul class="column">
-                                <li>Git</li>
-                                <li>Communication and Decision Making</li>
-                                <li>Project Leadership and Management</li>
-                            </ul>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="education-section">
-            <img src="assets/cherry-icon.png" alt="cherry" class="cherry-top-right">
-            <img src="assets/cherry-icon.png" alt="cherry" class="cherry-bottom-left">
-            <h2 class="section-title">✩｡*•. Education .•*｡✩</h2>
-            <div class="education-columns-container">
-                <ul class="education-list">
+
+            <div class="info-block">
+              <h3 class="info-title">Skills Set</h3>
+              <div class="columns-container">
+                <ul class="column">
+                  <li>HTML/CSS</li>
+                  <li>PHP</li>
+                  <li>SQL</li>
+                  <li>JavaScript</li>
                 </ul>
+                <ul class="column">
+                  <li>C</li>
+                  <li>API Rest</li>
+                  <li>Relational Database</li>
+                  <li>Canva</li>
+                </ul>
+                <ul class="column">
+                  <li>Git</li>
+                  <li>Communication and Decision Making</li>
+                  <li>Project Leadership and Management</li>
+                </ul>
+              </div>
             </div>
-        </section>
-        <section class="experiences-section">
-            <h2 class="section-title">✩｡*•. Job Experiences .•*｡✩</h2>
-            <div class="timeline">
-            </div>
-        </section>
-          
-        <!-- <div class="nav-indicator">
+          </div>
+        </div>
+      </section>
+      <section id="education-section" class="education-section">
+        <img
+          src="assets/cherry-icon.png"
+          alt="cherry"
+          class="cherry-top-right"
+        />
+        <img
+          src="assets/cherry-icon.png"
+          alt="cherry"
+          class="cherry-bottom-left"
+        />
+        <h2 class="section-title">✩｡*•. Education .•*｡✩</h2>
+        <div class="education-columns-container">
+          <ul class="education-list"></ul>
+        </div>
+      </section>
+      <section id="experiences-section" class="experiences-section">
+        <h2 class="section-title">✩｡*•. Job Experiences .•*｡✩</h2>
+        <div class="timeline"></div>
+      </section>
+
+      <!-- <div class="nav-indicator">
             <span class="dot active" data-section="home"></span>
             <span class="dot" data-section="about"></span>
             <span class="dot" data-section="education"></span>
@@ -97,16 +131,20 @@
         </div> -->
     </main>
     <footer class="footer">
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/zagvii" target="_blank" class="social-link">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/zagvii" target="_blank" class="social-link">
-                <i class="fa-brands fa-github"></i> GitHub
-            </a>
-        </div>
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/zagvii"
+          target="_blank"
+          class="social-link"
+        >
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/zagvii" target="_blank" class="social-link">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
