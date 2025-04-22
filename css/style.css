@@ -76,6 +76,10 @@ nav ul li a {
   font-family: "Zain", serif;
 }
 
+nav ul li a:hover {
+    color: var(--darkRedColor);
+  }
+
 header .circle-header {
   position: absolute;
   right: 20px;
@@ -132,12 +136,12 @@ header .circle-header {
   flex-direction: column;
   align-items: flex-start;
   max-width: 600px;
-  line-height: 2.5rem;
+  line-height: 2.7rem;
 }
 
 .text-block h1 {
   font-family: "Zain", serif;
-  font-size: 56px;
+  font-size: 65px;
   color: var(--blackFontColor);
 }
 
@@ -238,7 +242,7 @@ header .circle-header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 40px;
+  gap: 25px;
 }
 
 .image-with-lines {
@@ -258,6 +262,9 @@ header .circle-header {
 
 .image-with-lines p {
   font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .resume-button {
@@ -295,7 +302,7 @@ header .circle-header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 40px;
+  gap: 25px;
   width: 100%;
   max-width: 900px;
 }
@@ -355,149 +362,106 @@ header .circle-header {
 /* Education Section */
 
 .education-section {
-  margin: 30px 0px;
-}
-
-.cherry-top-right,
-.cherry-bottom-left {
-  position: absolute;
-  width: 60px;
-  height: auto;
-  z-index: 1;
-}
-
-.education-section {
-  background-color: var(--redMainColor);
-  position: relative;
-  overflow: visible;
-  padding-bottom: 50px;
-}
-
-.cherry-top-right {
-  top: -30px;
-  right: 0px;
-}
-
-.cherry-bottom-left {
-  bottom: -30px;
-  left: 0px;
-}
-
-.education-section .section-title {
-  color: white;
-}
-
-.education-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.education-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.top-line {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  color: white;
-  line-height: 25px;
-  font-weight: 500 !important;
-}
-
-.line-with-heart {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  min-width: 120px;
-}
-
-.line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: white;
-}
-
-.heart {
-  margin: 0 8px;
-}
-
-.major {
-  white-space: nowrap;
-  font-size: 1rem;
-  flex-shrink: 0;
-  font-weight: 500 !important;
-}
-
-.time {
-  white-space: nowrap;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-
-.school {
-  font-size: 15px;
-  color: #bbb;
-}
-
-@media (max-width: 768px) {
-  .education-section {
-    padding: 30px 15px;
-  }
-
-  .education-list {
-    gap: 25px;
-  }
-
-  .education-item {
-    padding: 0 5px;
+    background-color: var(--redMainColor);
+    padding: 60px 30px;
+    position: relative;
     text-align: center;
   }
-
-  .top-line {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+  
+  .education-section .section-title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 40px;
   }
-
-  .major {
-    font-size: 1rem;
-    white-space: normal;
-    text-align: center;
-  }
-
-  .line-with-heart {
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    gap: 5px;
-  }
-
-  .line {
-    width: 30%;
-    min-width: 30px;
-  }
-
-  .time {
-    font-size: 0.9rem;
-  }
-
-  .school {
-    font-size: 0.85rem;
-    padding-top: 5px;
-  }
-
+  
   .cherry-top-right,
   .cherry-bottom-left {
-    display: none;
+    position: absolute;
+    width: 60px;
+    z-index: 1;
   }
-}
+  
+  .cherry-top-right {
+    top: -30px;
+    right: 0;
+  }
+  
+  .cherry-bottom-left {
+    bottom: -30px;
+    left: 0;
+  }
+  
+  .education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 100%;
+  }
+  
+  .education-item {
+    flex: 1 1 280px;
+    max-width: 35%;
+    min-width: 30%;
+  }
+  
+  .education-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    text-align: left;
+  }
+  
+  .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+  }
+  
+  .edu-icon {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .edu-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .edu-time {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #ddd;
+  }
+  
+  .edu-school {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .education-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    .education-item {
+        max-width: 90%;
+        min-width: 90%;
+    }
+  }  
 
 /* Job Experiences Timeline */
 

@@ -43,16 +43,12 @@ fetch('assets/education.xlsx')
             item.classList.add('education-item');
 
             item.innerHTML = `
-                <div class="top-line">
-                    <h2 class="major">${entry.Major}</h2>
-                    <div class="line-with-heart">
-                        <div class="line"></div>
-                            <span class="heart">⋆♡⋆</span>
-                        <div class="line"></div>
-                    </div>
-                    <span class="time">${entry.Time}</span>
-                </div>
-                <p class="school">${entry.School}</p>
+                <a href="${entry.Link}" target="_blank" class="education-card">
+                    <i class="fa-solid fa-laptop-code edu-icon"></i>
+                    <h3 class="edu-title">${entry.Major}</h3>
+                    <span class="edu-time">${entry.Time}</span>
+                    <p class="edu-school">${entry.School}</p>
+                </a>
             `;
 
             container.appendChild(item);
