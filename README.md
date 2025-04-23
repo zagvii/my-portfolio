@@ -26,9 +26,7 @@ Check out the live version of this portfolio:
 📂 portfolio/
 ├── index.html
 ├── style.css
-├── scripts.js
+├── main.js
 ├── assets/
-│   ├── images/
-│   ├── fonts/
-│   └── sounds/
+│   └── .../
 └── README.md
