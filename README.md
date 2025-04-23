@@ -1,4 +1,4 @@
-# 🎨 Mirian Vieira – Personal Portfolio
+# 🎨 Mirian Vieira Moreira – Personal Portfolio
 
 Welcome to the repository of my personal portfolio! This project was crafted to showcase who I am, my experience, education, and the projects I’ve built or contributed to — all with a **custom visual identity** that stands out from the typical tech portfolio design. The color scheme is based on **white and cherry red 🍒**.
 
