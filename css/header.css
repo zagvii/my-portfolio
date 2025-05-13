@@ -1,0 +1,117 @@
+/* Header - Nav Buttons */
+
+header {
+    height: 2.5rem;
+    color: #ad1f21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    max-width: 100%;
+    z-index: 1000;
+    padding: 2rem 5rem;
+    background: none;
+  }
+  
+  header .spacing {
+    flex-grow: 1;
+  }
+  
+  header.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .left-group,
+  .right-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    position: relative;
+    color: var(--redMainColor);
+    text-decoration: none;
+    font-family: "Zain", serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    transition: color 0.2s ease;
+  }
+  
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--darkRedColor);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--darkRedColor);
+  }
+  
+  nav ul li a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  
+  nav ul li button {
+    background-color: var(--redMainColor);
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Zain", serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li button:hover {
+    background-color: var(--darkRedColor);
+  }  
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  
+    nav ul li {
+      margin-left: 10px;
+    }
+  
+    header {
+      justify-content: flex-end;
+    }
+  }
+  

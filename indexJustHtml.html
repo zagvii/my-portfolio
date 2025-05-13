@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mirian's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/cherry-icon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;300;400;700&family=Zain&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="assets/cherry-icon.png" alt="cherry-icon" />
+      <nav>
+        <ul>
+          <li><a href="#about-me-section">ABOUT ME</a></li>
+          <li><a href="#education-section">EDUCATION</a></li>
+          <li style="display: none"><a href="#">PROJECTS</a></li>
+          <li><a href="#experiences-section">JOB EXPERIENCES</a></li>
+        </ul>
+      </nav>
+      <div class="circle-header">MVM</div>
+    </header>
+
+    <main>
+      <section class="home-page">
+        <div class="text-block">
+          <h1>Hi, I'm <span class="name">Mirian</span></h1>
+          <p>
+            Hi, there! My name is Mirian Moreira and I’m a Full Stack Developer
+            based in Latin America. I’m very passionate in Front-end Development
+            and I love creating sophisticated and efficient Web Designs.
+          </p>
+        </div>
+        <div class="picture-block">
+          <div class="picture-frame">
+            <img src="assets/profile-picture.jpg" alt="profile-picture" />
+            <img
+              class="cherry-icon"
+              src="assets/cherry-icon.png"
+              alt="cherry-icon"
+            />
+          </div>
+        </div>
+      </section>
+      <div class="section-divider">─•°.-ˏˋ✧ˊˎ-.°•─</div>
+      <section id="about-me-section" class="about-me-section">
+        <h2 class="section-title">✩｡*•. About Me .•*｡✩</h2>
+        <div class="image-text-block">
+          <div class="image-with-lines">
+            <div class="picture-frame">
+              <img src="assets/profile-picture-mini.jpeg" alt="Minha Foto" />
+            </div>
+            <p><i class="fa-solid fa-location-dot"></i>RS, Brazil</p>
+            <p><i class="fa-solid fa-envelope"></i>mirian.vieira.moreira@gmail.com</p>
+            <a href="assets/resume-EN.pdf" download class="resume-button">MY RESUME</a>
+          </div>
+
+          <div class="text-and-info">
+            <div class="text-content">
+              <p>
+                Junior Front-End Developer with nearly 2 years of professional experience in web, mobile, and cross-platform development. Strong foundation in HTML, CSS, JavaScript, PHP, and SQL, with experience building responsive user interfaces and consuming RESTful APIs. Demonstrated ability to solve complex bugs, collaborate in agile teams (SCRUM), and contribute to scalable features across multiple platforms (Web, Android, and iOS). Passionate about clean code, inclusive design, and continuous learning.
+              </p>
+            </div>
+
+            <div class="info-block">
+              <h3 class="info-title">Skills Set</h3>
+              <div class="columns-container">
+                <ul class="column">
+                  <li><b>Languages & Technologies:</b> HTML, CSS, JavaScript, PHP, SQL, Java, Objective-C, C</li>
+                  <li><b>Frameworks:</b> React.js (in progress) and Tailwind CSS (in progress)</li>
+                  <li><b>Tools:</b> Git, Postman, Swagger, Figma, Canva, Google Sheets, Miro, WordPress (in progress)</li>
+                  <li><b>Concepts:</b> Relational Databases, Object-Oriented Programming (OOP), Programming Logic, Responsive Design, REST APIs, Agile (SCRUM)</li>
+                  <li><b>Soft Skills:</b> Teamwork, Communication, Adaptability, Self-management, Problem-solving,  Decision-Making and Project Leadership</li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="education-section" class="education-section">
+        <img
+          src="assets/cherry-icon.png"
+          alt="cherry"
+          class="cherry-top-right"
+        />
+        <img
+          src="assets/cherry-icon.png"
+          alt="cherry"
+          class="cherry-bottom-left"
+        />
+        <h2 class="section-title">✩｡*•. Education .•*｡✩</h2>
+        <div class="education-columns-container">
+          <ul class="education-list"></ul>
+        </div>
+      </section>
+      <section id="experiences-section" class="experiences-section">
+        <h2 class="section-title">✩｡*•. Work Experiences .•*｡✩</h2>
+        <div class="timeline"></div>
+      </section>
+
+      <!-- <div class="nav-indicator">
+            <span class="dot active" data-section="home"></span>
+            <span class="dot" data-section="about"></span>
+            <span class="dot" data-section="education"></span>
+            <span class="dot" data-section="experiences"></span>
+        </div> -->
+    </main>
+    <footer class="footer">
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/zagvii"
+          target="_blank"
+          class="social-link"
+        >
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/zagvii" target="_blank" class="social-link">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
