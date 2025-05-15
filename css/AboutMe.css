@@ -1,0 +1,111 @@
+/* About Me - Bloco com colunas */
+
+.info-block {
+    text-align: center;
+  }
+
+  .about-me-section .picture-frame {
+    padding: 0;
+  }
+  
+  .info-title {
+    font-size: 1.5rem;
+    color: #ad1f21;
+    font-family: "Zain", serif;
+    text-align: left;
+  }
+  
+  .columns-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    border-left: 2px solid #ad1f21;
+    border-bottom: 2px solid #ad1f21;
+    padding: 0 30px 10px 30px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+    text-align: justify;
+  }
+  
+  .column li::marker {
+    font-size: 15px;
+    color: #ad1f21;
+  }
+
+  .image-text-block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .image-with-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .image-with-lines img {
+    width: 245px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .image-with-lines p {
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .resume-button {
+      display: inline-block;
+      background-color: #ad1f21; 
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 15px;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-family: inherit;
+      transition: background-color 0.3s ease;
+  }
+  
+  .resume-button:hover {
+      background-color: var(--darkRedColor);
+  }
+  
+  .text-and-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 25px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .text-content {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .text-and-info p {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .columns-container {
+      gap: 20px;
+    }
+  }

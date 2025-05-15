@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../css/home.css'; 
+import '../../css/Home.css'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Home() {
   return (
-    <section className="home-page">
+    <section className="home-page" id="home-page">
       <div className="text-block">
           <h1>Hi, I'm <span className="name">Mirian_</span></h1>
           <p>

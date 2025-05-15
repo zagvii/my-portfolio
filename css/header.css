@@ -12,7 +12,7 @@ header {
     max-width: 100%;
     z-index: 1000;
     padding: 2rem 5rem;
-    background: none;
+    background-color: var(--darkestRedColor);
   }
   
   header .spacing {
@@ -83,7 +83,7 @@ header {
   }
   
   
-  nav ul li button {
+  nav ul .resume-button-header {
     background-color: var(--redMainColor);
     color: white;
     padding: 6px 12px;
@@ -91,10 +91,12 @@ header {
     border-radius: 6px;
     cursor: pointer;
     font-family: "Zain", serif;
+    font-weight: bold;
+    text-decoration: none;
     transition: background-color 0.3s ease;
   }
   
-  nav ul li button:hover {
+  nav ul .resume-button-header:hover {
     background-color: var(--darkRedColor);
   }  
   

@@ -3,7 +3,7 @@
   --darkRedColor: #780313;
   --blackFontColor: #0f0002;
   --backgroundColor: #ede9e7;
-  --darkestRedColor: #0f0909	;
+  --darkestRedColor: #0f0909;
 }
 
 * {
@@ -14,13 +14,13 @@
 
 body {
   font-family: "Be Vietnam", sans-serif;
-  color: var(--blackFontColor);
+  color: #cbb6b3;
   overflow-x: hidden;
   background-color: var(--darkestRedColor);
 }
 
 html {
-  scroll-padding-top: 6rem; /* corrige rolagem com header fixo */
+  scroll-padding-top: 6rem; 
   scroll-behavior: smooth;
 }
 
@@ -29,243 +29,18 @@ html {
 .about-me-section,
 .education-section,
 .experiences-section {
-  padding: 40px 30px;
+  margin: 3rem 0;
+  padding: 0 5rem;
   max-height: 100%;
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   margin-bottom: 30px;
   font-family: "Zain", serif;
   color: var(--redMainColor);
 }
-
-.image-text-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 25px;
-}
-
-.image-with-lines {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 100%;
-}
-
-.image-with-lines img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.image-with-lines p {
-  font-size: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.resume-button {
-    display: inline-block;
-    background-color: var(--redMainColor); 
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 15px;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-family: inherit;
-    transition: background-color 0.3s ease;
-}
-
-.resume-button:hover {
-    background-color: var(--darkRedColor);
-}
-
-
-.about-me-section .picture-frame::before {
-  content: "";
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  top: -5px;
-  left: -5px;
-  border-radius: 50%;
-  background-color: var(--redMainColor);
-  z-index: 0;
-}
-
-.text-and-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 25px;
-  width: 100%;
-  max-width: 900px;
-}
-
-.text-content {
-  font-size: 16px;
-  line-height: 1.6;
-  padding: 0 20px;
-}
-
-.text-and-info p {
-  font-size: 16px;
-}
-
-/* About Me - Bloco com colunas */
-
-.info-block {
-  text-align: center;
-}
-
-.info-title {
-  font-size: 1.5rem;
-  color: var(--redMainColor);
-  font-family: "Zain", serif;
-  text-align: left;
-}
-
-.columns-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  flex-wrap: wrap;
-  border-left: 2px solid var(--redMainColor);
-  border-bottom: 2px solid var(--redMainColor);
-  padding: 0 30px 10px 30px;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  font-size: 16px;
-  text-align: justify;
-}
-
-.column li::marker {
-  font-size: 15px;
-  color: var(--redMainColor);
-}
-
-@media (max-width: 768px) {
-  .columns-container {
-    gap: 20px;
-  }
-}
-
-/* Education Section */
-
-.education-section {
-    background-color: var(--redMainColor);
-    padding: 60px 30px;
-    position: relative;
-    text-align: center;
-  }
-  
-  .education-section .section-title {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  .cherry-top-right,
-  .cherry-bottom-left {
-    position: absolute;
-    width: 60px;
-    z-index: 1;
-  }
-  
-  .cherry-top-right {
-    top: -30px;
-    right: 0;
-  }
-  
-  .cherry-bottom-left {
-    bottom: -30px;
-    left: 0;
-  }
-  
-  .education-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
-    max-width: 100%;
-  }
-  
-  .education-item {
-    flex: 1 1 280px;
-    max-width: 35%;
-    min-width: 30%;
-  }
-  
-  .education-card {
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    color: white;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    text-align: left;
-  }
-  
-  .education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
-  }
-  
-  .edu-icon {
-    font-size: 2rem;
-    color: white;
-  }
-  
-  .edu-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .edu-time {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #ddd;
-  }
-  
-  .edu-school {
-    font-size: 0.95rem;
-    color: #ccc;
-  }
-  
-  @media (max-width: 768px) {
-    .education-list {
-      flex-direction: column;
-      align-items: center;
-    }
-    .education-item {
-        max-width: 90%;
-        min-width: 90%;
-    }
-  }  
 
 /* Job Experiences Timeline */
 
@@ -333,34 +108,6 @@ html {
   text-align: center;
 }
 
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  transition: opacity 0.3s ease;
-}
-
-.social-link img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
-}
-
-.social-link:hover {
-  opacity: 0.8;
-}
-
 /* Nav Circles (Not used anymore) */
 
 .nav-indicator {
@@ -375,17 +122,3 @@ html {
   align-items: center;
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  background-color: #f2aec7;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  width: 12px;
-  height: 12px;
-  background: none;
-  border: 2px solid #f2aec7;
-}
