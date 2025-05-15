@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import '../../css/Education.css'; 
+import AOS from 'aos';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'aos/dist/aos.css';
 
 function Education() {
 
@@ -21,6 +23,10 @@ function Education() {
         });
     }, []);
 
+    useEffect(() => {
+        AOS.init({ duration: 500 });
+    }, []);
+
     return (
         <section id="education-section" className="education-section">
             <h2 className="section-title">Education</h2>
@@ -28,8 +34,14 @@ function Education() {
                 <ul class="education-list">
                     {educationData.map((educationItem) => (
                         <li className='education-item' key={educationItem.id}>
-                            <a href={educationItem.Link} target="_blank" className="education-card" style={{
-                                backgroundImage: `url('/assets/${educationItem.Image}')`,
+                            <a 
+                                href={educationItem.Link} 
+                                target="_blank" 
+                                data-aos="fade-up" 
+                                data-aos-delay="0"
+                                className="education-card" 
+                                style={{
+                                    backgroundImage: `url('/assets/${educationItem.Image}')`,
                                 }}>
                                 <div className="overlay" />
                                 <div className="edu-content">
@@ -37,8 +49,9 @@ function Education() {
                                         <h3 className="edu-title">{educationItem.Major}</h3>
                                         {/* <i className="fa-solid fa-laptop-code edu-icon"></i> */}
                                     </div>
+                                    <hr/>
                                     <span className="edu-time"><i class="fa-regular fa-clock"/>{educationItem.Time}</span>
-                                    <p className="edu-school">{educationItem.School}</p>
+                                    <p className="edu-school"><i class="fa-solid fa-globe"/>{educationItem.School}</p>
                                 </div>
                             </a>
                         </li>

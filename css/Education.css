@@ -50,7 +50,7 @@
     background-position: center;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     height: 190px;
     padding: 25px;
@@ -68,7 +68,7 @@
   .education-card .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65); 
+    background: rgba(0, 0, 0, 0.75); 
     z-index: 1;
     transition: background 0.4s ease;
   }
@@ -90,10 +90,11 @@
   }
   
   .edu-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 0;
     text-align: center;
+    font-family: "Zain", serif;
   }
   
   .edu-time {
@@ -110,6 +111,11 @@
   .edu-school {
     font-size: 0.85rem;
     color: #ddd;
+    display: flex;
+    gap: 15px;
+    line-height: 0.85rem;
+    justify-content: center;
+    text-align: justify;
   }
   
   
