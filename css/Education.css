@@ -56,19 +56,18 @@
     padding: 25px;
     display: flex;
     align-items: flex-end;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     align-items: flex-start;
     text-align: center;
   }
 
   .education-card:hover .overlay{
-    background: rgba(0, 0, 0, 0.80); 
+    background: rgba(0, 0, 0, 0.75); 
   }
   
   .education-card .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.75); 
+    background: rgba(0, 0, 0, 0.9); 
     z-index: 1;
     transition: background 0.4s ease;
   }
@@ -118,6 +117,9 @@
     text-align: justify;
   }
   
+  .education-section i {
+    color: #ad1f21;
+  }
   
   @media (max-width: 768px) {
     .education-list {

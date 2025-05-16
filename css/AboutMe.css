@@ -2,6 +2,7 @@
 
 .info-block {
     text-align: center;
+    width: 100%;
   }
 
   .about-me-section .picture-frame {
@@ -13,6 +14,22 @@
     color: #ad1f21;
     font-family: "Zain", serif;
     text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .info-columns.techColumns{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .info-columns{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
   }
   
   .columns-container {
@@ -20,22 +37,74 @@
     justify-content: space-between;
     gap: 60px;
     flex-wrap: wrap;
-    border-left: 2px solid #ad1f21;
-    border-bottom: 2px solid #ad1f21;
     padding: 0 30px 10px 30px;
   }
-  
-  .column {
+
+  .columnInfo {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     font-size: 16px;
-    text-align: justify;
+    border-radius: 4px;
+    padding: 0px;
+  }
+
+  .techColumns .columnInfo b{
+    margin-bottom: 15px;
+    text-align: left;
+    font-family: "Zain", serif;
+    font-size: 1.2rem;
+  }
+
+  .columnInfo b{
+    margin-bottom: 5px;
+    text-align: left;
+    font-family: "Zain", serif;
+    font-size: 1.2rem;
+  }
+
+  .columnInfo ul.tech li {
+    font-size: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    list-style: none;
+    border: 1px solid #ad1f2166;
+    background-color: #ad1f2113;
+    box-shadow: 0 0 10px rgba(255, 0, 64, 0.3);
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .columnInfo ul.tech li:hover {
+    background-color: #ad1f2161;
+    box-shadow: 0 0 12px rgba(255, 0, 64, 0.4);  
+    border: none;
+  }
+
+  .columnInfo ul li {
+    list-style-position: inside;
+    text-align: left;
   }
   
-  .column li::marker {
-    font-size: 15px;
-    color: #ad1f21;
+  .column.tech {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   .image-text-block {
@@ -62,6 +131,7 @@
   
   .image-with-lines p {
     font-size: 14px;
+    margin-bottom: 8px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -73,8 +143,9 @@
       color: white;
       font-weight: bold;
       border-radius: 5px;
-      margin-top: 15px;
+      margin-top: 10px;
       padding: 10px 20px;
+      font-size: 14px;
       text-decoration: none;
       font-family: inherit;
       transition: background-color 0.3s ease;
@@ -96,12 +167,12 @@
   }
   
   .text-content {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
   }
   
   .text-and-info p {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   @media (max-width: 768px) {

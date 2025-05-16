@@ -4,27 +4,89 @@ import '../../css/AboutMe.css';
 function AboutMe() {
   return (
     <section className="about-me-section" id="about-me-section">
-      <h2 class="section-title">About Me</h2>
-        <div class="image-text-block">
-          <div class="image-with-lines">
-            <div class="picture-frame">
+      <h2 className="section-title">About Me</h2>
+        <div className="image-text-block">
+          <div className="image-with-lines">
+            <div className="picture-frame">
               <img src="/assets/profile-picture-land.jpeg" alt="Minha Foto" />
             </div>
-            <p><i class="fa-solid fa-location-dot"></i>RS, Brazil</p>
-            <p><i class="fa-solid fa-envelope"></i>mirian.vieira.moreira@gmail.com</p>
-            <a href="assets/resume-EN.pdf" download class="resume-button">MY RESUME</a>
+            <p><i className="fa-solid fa-location-dot"></i>RS, Brazil</p>
+            <p><i className="fa-solid fa-envelope"></i>mirian.vieira.moreira@gmail.com</p>
+            <a href="assets/resume-EN.pdf" download className="resume-button">MY RESUME</a>
           </div>
 
-          <div class="text-and-info">
-            <div class="text-content">
+          <div className="text-and-info">
+            <div className="text-content">
               <p>
                 Junior Front-End Developer with nearly 2 years of professional experience in web, mobile, and cross-platform development. Strong foundation in HTML, CSS, JavaScript, PHP, and SQL, with experience building responsive user interfaces and consuming RESTful APIs. Demonstrated ability to solve complex bugs, collaborate in agile teams (SCRUM), and contribute to scalable features across multiple platforms (Web, Android, and iOS). Passionate about clean code, inclusive design, and continuous learning.
               </p>
             </div>
 
-            <div class="info-block">
-              <h3 class="info-title">Skills Set</h3>
-              <div class="columns-container">
+            <div className="info-block">
+              <h3 className="info-title">Skills Set</h3>
+              <div className='info-columns techColumns'>
+                <div className='columnInfo'>
+                  <b>Languages & Technologies:</b> 
+                  <ul className="column tech">
+                    <li><i className="devicon-html5-plain colored"></i></li>
+                    <li><i className="devicon-css3-plain colored"></i></li>
+                    <li><i className="devicon-javascript-plain colored"></i></li>
+                    <li><i className="devicon-php-plain colored"></i></li>
+                    <li><i className="devicon-c-plain colored"></i></li>
+                    <li><i className="devicon-mysql-plain colored"></i></li>
+                    <li><i className="devicon-java-plain colored"></i></li>
+                    <li><i className="devicon-objectivec-plain"></i></li>
+                  </ul>
+                </div>
+                <div className='columnInfo'>
+                  <b>Frameworks (learning in progress):</b> 
+                  <ul className="column tech">
+                    <li><i className="devicon-react-plain colored"></i></li>
+                    <li><i className="devicon-tailwindcss-plain colored"></i></li>
+                  </ul>
+                </div>
+                <div className='columnInfo'>
+                  <b>Tools:</b> 
+                  <ul className="column tech">
+                    <li><i className="devicon-git-plain colored"></i></li>
+                    <li><i className="devicon-postman-plain colored"></i></li>
+                    <li><i className="devicon-swagger-plain colored"></i></li>
+                    <li><i className="devicon-figma-plain colored"></i></li>
+                    <li><i className="devicon-canva-plain colored"></i></li>
+                    <li><i className="devicon-miro-plain colored"></i></li>
+                    <li><i className="devicon-googlesheets-plain colored"></i></li>
+                    <li><i className="devicon-wordpress-plain colored"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <br></br>
+              <div className='info-columns'>
+                <div className='columnInfo'>
+                  <b>Concepts:</b> 
+                  <ul className="column">
+                    <li>Relational Databases</li>
+                    <li>Object-Oriented Programming (OOP)</li>
+                    <li>Programming Logic</li>
+                    <li>Responsive Design</li>
+                    <li>REST APIs</li>
+                    <li>Agile (SCRUM)</li>
+                  </ul>
+                </div>
+                <div className='columnInfo'>
+                  <b>Soft Skills:</b> 
+                  <ul className="column">
+                    <li>Teamwork</li>
+                    <li>Communication</li>
+                    <li>Adaptability</li>
+                    <li>Self-management</li>
+                    <li>Problem-solving</li>
+                    <li>Decision-Making</li>
+                    <li>Project Leadership</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* <div class="columns-container">
                 <ul class="column">
                   <li><b>Languages & Technologies:</b> HTML, CSS, JavaScript, PHP, SQL, Java, Objective-C, C</li>
                   <li><b>Frameworks:</b> React.js (in progress) and Tailwind CSS (in progress)</li>
@@ -32,7 +94,7 @@ function AboutMe() {
                   <li><b>Concepts:</b> Relational Databases, Object-Oriented Programming (OOP), Programming Logic, Responsive Design, REST APIs, Agile (SCRUM)</li>
                   <li><b>Soft Skills:</b> Teamwork, Communication, Adaptability, Self-management, Problem-solving,  Decision-Making and Project Leadership</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -51,7 +51,7 @@ function Education() {
                                     </div>
                                     <hr/>
                                     <span className="edu-time"><i class="fa-regular fa-clock"/>{educationItem.Time}</span>
-                                    <p className="edu-school"><i class="fa-solid fa-globe"/>{educationItem.School}</p>
+                                    <p className="edu-school"><i class="fa-solid fa-school"/>{educationItem.School}</p>
                                 </div>
                             </a>
                         </li>

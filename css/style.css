@@ -100,14 +100,6 @@ html {
   text-align: justify;
 }
 
-/* Footer */
-
-.footer {
-  background-color: var(--redMainColor);
-  padding: 10px 0;
-  text-align: center;
-}
-
 /* Nav Circles (Not used anymore) */
 
 .nav-indicator {

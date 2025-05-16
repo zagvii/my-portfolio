@@ -114,7 +114,7 @@
     font-weight: bold;
 }
 
-.socials {
+.home-page .socials {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -123,7 +123,7 @@
     margin-top: 10px;
 }
   
-.social-link {
+.home-page .social-link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -133,13 +133,13 @@
     transition: opacity 0.3s ease;
 }
   
-.social-link img {
+.home-page .social-link img {
     width: 24px;
     height: 24px;
     filter: brightness(0) invert(1);
 }
   
-.social-link:hover {
+.home-page .social-link:hover {
     opacity: 0.8;
 }
 
