@@ -1,6 +1,9 @@
 import React from 'react';
 import '../../css/AboutMe.css'; 
 
+import MiroIcon from '../../public/assets/miro.png';
+import SheetsIcon from '../../public/assets/googlesheets.png';
+
 function AboutMe() {
   return (
     <section className="about-me-section" id="about-me-section">
@@ -48,14 +51,14 @@ function AboutMe() {
                 <div className='columnInfo'>
                   <b>Tools:</b> 
                   <ul className="column tech">
-                    <li><i className="devicon-git-plain colored"></i></li>
-                    <li><i className="devicon-postman-plain colored"></i></li>
-                    <li><i className="devicon-swagger-plain colored"></i></li>
-                    <li><i className="devicon-figma-plain colored"></i></li>
-                    <li><i className="devicon-canva-plain colored"></i></li>
-                    <li><i className="devicon-miro-plain colored"></i></li>
-                    <li><i className="devicon-googlesheets-plain colored"></i></li>
-                    <li><i className="devicon-wordpress-plain colored"></i></li>
+                    <li><i className="devicon-git-plain colored"/></li>
+                    <li><i className="devicon-postman-plain colored"/></li>
+                    <li><i className="devicon-swagger-plain colored"/></li>
+                    <li><i className="devicon-figma-plain colored"/></li>
+                    <li><i className="devicon-canva-plain colored"/></li>
+                    <li><img src={MiroIcon} alt="Miro" className="custom-icon"/></li>
+                    <li><img src={SheetsIcon} alt="Google Sheets" className="custom-icon"/></li>
+                    <li><i className="devicon-wordpress-plain colored"/></li>
                   </ul>
                 </div>
               </div>
