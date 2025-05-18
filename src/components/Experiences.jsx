@@ -8,7 +8,7 @@ function Home() {
     const [experiencesData, setExperiencesData] = useState([]);
 
     useEffect(() => {
-        fetch('../../assets/experiences.xlsx')
+        fetch(`${import.meta.env.BASE_URL}assets/experiences.xlsx`)
         .then((res) => res.arrayBuffer())
         .then((arrayBuffer) => {
             const workbook = XLSX.read(arrayBuffer, { type: 'array' });
@@ -28,17 +28,17 @@ function Home() {
     
 
     return (
-        <section id="experiences-section" class="experiences-section">
-            <h2 class="section-title">Work Experiences</h2>
-            <div class="timeline">
+        <section id="experiences-section" className="experiences-section">
+            <h2 className="section-title">Work Experiences</h2>
+            <div className="timeline">
                 <ul>
                     {experiencesData.map((experiencesItem) => (
                         <li key={experiencesItem.id}>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h3 class="timeline-title">{experiencesItem.Time} | {experiencesItem.Title}</h3>
-                                    <p class="timeline-description">{experiencesItem.Description}</p>
+                            <div className="timeline-item">
+                                <div className="timeline-dot"></div>
+                                <div className="timeline-content">
+                                    <h3 className="timeline-title">{experiencesItem.Time} | {experiencesItem.Title}</h3>
+                                    <p className="timeline-description">{experiencesItem.Description}</p>
                                 </div>
                             </div>
                         </li>

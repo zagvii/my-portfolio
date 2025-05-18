@@ -10,9 +10,9 @@ function Header () {
                     <li><a href="#about-me-section">ABOUT ME</a></li>
                     <li><a href="#education-section">EDUCATION</a></li>
                 </div>
-                <div class="right-group">
+                <div className="right-group">
                     <li><a href="#experiences-section">WORK EXPERIENCES</a></li>
-                    <a className="resume-button-header" href="assets/resume-EN.pdf" download>Download my CV</a>
+                    <a className="resume-button-header" href="/assets/resume-EN.pdf" download>Download my CV</a>
                 </div>
                 </ul>
             </nav>

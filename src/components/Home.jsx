@@ -23,7 +23,7 @@ function Home() {
         </div>
         <div className="picture-block">
           <div className="picture-frame">
-            <img src="assets/profile-picture-mini.jpeg" alt="profile-picture" />
+            <img src="/assets/profile-picture-mini.jpeg" alt="profile-picture" />
           </div>
         </div>
     </section>

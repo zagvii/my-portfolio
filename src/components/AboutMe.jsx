@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../css/AboutMe.css'; 
 
-import MiroIcon from '../../public/assets/miro.png';
-import SheetsIcon from '../../public/assets/googlesheets.png';
+const miroIcon = `${import.meta.env.BASE_URL}assets/miro.png`;
+const sheetsIcon = `${import.meta.env.BASE_URL}assets/googlesheets.png`;
 
 function AboutMe() {
   return (
@@ -15,7 +15,7 @@ function AboutMe() {
             </div>
             <p><i className="fa-solid fa-location-dot"></i>RS, Brazil</p>
             <p><i className="fa-solid fa-envelope"></i>mirian.vieira.moreira@gmail.com</p>
-            <a href="assets/resume-EN.pdf" download className="resume-button">MY RESUME</a>
+            <a href="/assets/resume-EN.pdf" download className="resume-button">MY RESUME</a>
           </div>
 
           <div className="text-and-info">
@@ -56,8 +56,8 @@ function AboutMe() {
                     <li><i className="devicon-swagger-plain colored"/></li>
                     <li><i className="devicon-figma-plain colored"/></li>
                     <li><i className="devicon-canva-plain colored"/></li>
-                    <li><img src={MiroIcon} alt="Miro" className="custom-icon"/></li>
-                    <li><img src={SheetsIcon} alt="Google Sheets" className="custom-icon"/></li>
+                    <li><img src={miroIcon} alt="Miro" className="custom-icon"/></li>
+                    <li><img src={sheetsIcon} alt="Google Sheets" className="custom-icon"/></li>
                     <li><i className="devicon-wordpress-plain colored"/></li>
                   </ul>
                 </div>
@@ -88,16 +88,6 @@ function AboutMe() {
                   </ul>
                 </div>
               </div>
-
-              {/* <div class="columns-container">
-                <ul class="column">
-                  <li><b>Languages & Technologies:</b> HTML, CSS, JavaScript, PHP, SQL, Java, Objective-C, C</li>
-                  <li><b>Frameworks:</b> React.js (in progress) and Tailwind CSS (in progress)</li>
-                  <li><b>Tools:</b> Git, Postman, Swagger, Figma, Canva, Google Sheets, Miro, WordPress (in progress)</li>
-                  <li><b>Concepts:</b> Relational Databases, Object-Oriented Programming (OOP), Programming Logic, Responsive Design, REST APIs, Agile (SCRUM)</li>
-                  <li><b>Soft Skills:</b> Teamwork, Communication, Adaptability, Self-management, Problem-solving,  Decision-Making and Project Leadership</li>
-                </ul>
-              </div> */}
             </div>
           </div>
         </div>
