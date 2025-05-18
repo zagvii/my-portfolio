@@ -5,6 +5,7 @@ import RedDots from './components/RedDots';
 import AboutMe from './components/AboutMe';
 import Education from './components/Education';
 import Footer from './components/Footer';
+import Experiences from './components/Experiences';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Home />
             <AboutMe />
             <Education />
+            <Experiences />
             <Footer />
         </div>
     );

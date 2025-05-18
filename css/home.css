@@ -131,6 +131,7 @@
     text-decoration: none;
     font-size: 20px;
     transition: opacity 0.3s ease;
+    margin: 0px;
 }
   
 .home-page .social-link img {

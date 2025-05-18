@@ -1,0 +1,57 @@
+
+/* Job Experiences Timeline */
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline li {
+    list-style-type: none;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--redMainColor);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -28.5px;
+    top: 10px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--redMainColor);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--redMainColor);
+  }
+  
+  .timeline-content {
+    padding-left: 10px;
+  }
+  
+  .timeline-title {
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: "Zain", serif;
+  }
+  
+  .timeline-description {
+    font-size: 16px;
+    color: #666;
+    max-width: 100%;
+    text-align: justify;
+  }
+  

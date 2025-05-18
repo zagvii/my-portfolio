@@ -11,7 +11,7 @@ function Header () {
                     <li><a href="#education-section">EDUCATION</a></li>
                 </div>
                 <div class="right-group">
-                    {/* <li><a href="#experiences-section">JOB EXPERIENCES</a></li> */}
+                    <li><a href="#experiences-section">WORK EXPERIENCES</a></li>
                     <a className="resume-button-header" href="assets/resume-EN.pdf" download>Download my CV</a>
                 </div>
                 </ul>
