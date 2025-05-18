@@ -12,7 +12,7 @@ function Header () {
                 </div>
                 <div className="right-group">
                     <li><a href="#experiences-section">WORK EXPERIENCES</a></li>
-                    <a className="resume-button-header" href="/assets/resume-EN.pdf" download>Download my CV</a>
+                    <a className="resume-button-header" href={`${import.meta.env.BASE_URL}assets/resume-EN.pdf`} download>Download my CV</a>
                 </div>
                 </ul>
             </nav>

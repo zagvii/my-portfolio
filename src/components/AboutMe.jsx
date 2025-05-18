@@ -11,11 +11,11 @@ function AboutMe() {
         <div className="image-text-block">
           <div className="image-with-lines">
             <div className="picture-frame">
-              <img src="/assets/profile-picture-land.jpeg" alt="Minha Foto" />
+              <img src={`${import.meta.env.BASE_URL}assets/profile-picture-land.jpeg`} alt="Minha Foto" />
             </div>
             <p><i className="fa-solid fa-location-dot"></i>RS, Brazil</p>
             <p><i className="fa-solid fa-envelope"></i>mirian.vieira.moreira@gmail.com</p>
-            <a href="/assets/resume-EN.pdf" download className="resume-button">MY RESUME</a>
+            <a href={`${import.meta.env.BASE_URL}assets/resume-EN.pdf`} download className="resume-button">MY RESUME</a>
           </div>
 
           <div className="text-and-info">
