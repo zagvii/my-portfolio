@@ -1,6 +1,6 @@
 # 🍒 Mirian Vieira Moreira – Personal Portfolio
 
-Welcome to the repository of my personal portfolio! This project was crafted to showcase who I am, my experience, education, and the projects I’ve built or contributed to — all with a **custom visual identity** that stands out from the typical tech portfolio design. The color scheme is based on **white and cherry red 🍒**.
+Welcome to the repository of my personal portfolio! This project was crafted to showcase who I am, my experience, education, and the projects I’ve built or contributed to — all with a **custom visual identity** that stands out from the typical tech portfolio design. The color scheme is based on **black and cherry red 🍒**.
 
 ## 🎀 About
 
@@ -11,6 +11,7 @@ This portfolio is my digital showcase — built with care and attention to desig
 - HTML5  
 - CSS3 (with custom responsive design and visual effects)  
 - JavaScript (for interactivity and dynamic features)  
+- React (for building reusable UI components and managing state)  
 - Custom fonts (Google Fonts + local alternatives)  
 - Responsive Design (some sections follow Mobile First principles)  
 
