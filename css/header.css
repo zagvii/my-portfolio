@@ -2,7 +2,7 @@
 
 header {
     height: 2.5rem;
-    color: #ad1f21;
+    color: var(--redMainColor);
     display: flex;
     justify-content: center;
     align-items: center;

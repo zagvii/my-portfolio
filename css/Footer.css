@@ -6,7 +6,7 @@
     font-family: 'Zain', serif;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #ad1f2166;
+    border-top: 1px solid var(--redMainColor)66;
   }
   
   .social-link {

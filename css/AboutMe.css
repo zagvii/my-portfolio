@@ -11,7 +11,7 @@
   
   .info-title {
     font-size: 1.5rem;
-    color: #ad1f21;
+    color: var(--redMainColor);
     font-family: "Zain", serif;
     text-align: left;
     margin-bottom: 10px;
@@ -46,8 +46,8 @@
     font-size: 16px;
     border-radius: 4px;
     padding: 10px 15px;
-    border: 1px solid #ad1f2166;
-    background-color: #ad1f2113;
+    border: 1px solid var(--redMainColor)66;
+    background-color: var(--redMainColor)13;
     box-shadow: 0 0 10px rgba(255, 0, 64, 0.3);
     margin-bottom: 10px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -85,14 +85,14 @@
     height: 48px;
     border-radius: 5px;
     list-style: none;
-    background-color: #ad1f2166;
+    background-color: var(--redMainColor)66;
     box-shadow: 0 0 10px rgba(255, 0, 64, 0.3);
     margin-bottom: 10px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   .columnInfo ul.tech li:hover {
-    background-color: #ad1f2161;
+    background-color: var(--redMainColor)61;
     box-shadow: 0 0 12px rgba(255, 0, 64, 0.4);  
     border: none;
   }
@@ -124,7 +124,7 @@
   }
 
   .column li::marker {
-    color: #ad1f21;
+    color: var(--redMainColor);
   }
 
   .image-text-block {
@@ -159,7 +159,7 @@
   
   .resume-button {
       display: inline-block;
-      background-color: #ad1f21; 
+      background-color: var(--redMainColor); 
       color: white;
       font-weight: bold;
       border-radius: 5px;

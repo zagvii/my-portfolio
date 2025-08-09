@@ -7,7 +7,7 @@
   }
   
   .education-section .section-title {
-    color: #ad1f21;
+    color: var(--redMainColor);
     font-size: 2rem;
     margin-bottom: 40px;
   }
@@ -118,7 +118,7 @@
   }
   
   .education-section i {
-    color: #ad1f21;
+    color: var(--redMainColor);
   }
   
   @media (max-width: 768px) {
