@@ -1,8 +1,8 @@
 /* Header - Nav Buttons */
 
 header {
-    height: 2.5rem;
-    color: var(--redMainColor);
+    height: 2rem;
+    color: #d84e65;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ header {
     max-width: 100%;
     z-index: 1000;
     padding: 2rem 5rem;
-    background-color: var(--darkestRedColor);
+    background-color: none;
   }
   
   header .spacing {
@@ -26,33 +26,39 @@ header {
   }
 
   header nav {
+    position: relative; 
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; 
+    box-sizing: border-box;
   }
 
   nav ul {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     list-style: none;
-    width: 100%;
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
+    gap: 20px;
   }
-  
-  .left-group,
-  .right-group {
+
+  .rightAlign {
+    position: absolute;
+    right: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
   }
-  
+
   nav ul li {
     list-style: none;
   }
   
   nav ul li a {
     position: relative;
-    color: var(--redMainColor);
+    color: #d84e65;
     text-decoration: none;
     font-family: "Zain", serif;
     font-weight: bold;
@@ -68,27 +74,26 @@ header {
     bottom: 0;
     height: 2px;
     width: 100%;
-    background-color: var(--darkRedColor);
+    background-color: #972c3e;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
   }
 
   nav ul li a:hover {
-    color: var(--darkRedColor);
+    color: #972c3e;
   }
   
   nav ul li a:hover::after {
     transform: scaleX(1);
   }
   
-  
-  nav ul .resume-button-header {
-    background-color: var(--redMainColor);
+  .resume-button-header {
+    background-color: #d84e65;
     color: white;
     padding: 6px 12px;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     cursor: pointer;
     font-family: "Zain", serif;
     font-weight: bold;
@@ -96,9 +101,18 @@ header {
     transition: background-color 0.3s ease;
   }
   
-  nav ul .resume-button-header:hover {
-    background-color: var(--darkRedColor);
+  .resume-button-header:hover {
+    background-color: #972c3e;
   }  
+
+  .selectLanguage {
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 7px;
+    border: 2px solid #d84e65;
+    color: #d84e65;
+    font-weight: bold;
+  } 
   
   /* Responsividade */
   @media (max-width: 768px) {

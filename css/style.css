@@ -4,6 +4,11 @@
   --blackFontColor: #0f0002;
   --backgroundColor: #ede9e7;
   --darkestRedColor: #0f0909;
+  --lightWhite: rgb(254, 242, 244);
+  --white: rgb(254, 232, 235);
+  --lightPink: #FCD8DE;
+  --pink: #FEC4D2;
+  --darkPink: #FEB7C3;
 }
 
 * {
@@ -14,9 +19,9 @@
 
 body {
   font-family: "Be Vietnam", sans-serif;
-  color: #cbb6b3;
+  color: var(--darkPink);
   overflow-x: hidden;
-  background-color: var(--darkestRedColor);
+  background-color: var(--white);
 }
 
 html {
