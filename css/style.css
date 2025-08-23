@@ -6,9 +6,9 @@
   --darkestRedColor: #0f0909;
   --lightWhite: rgb(254, 242, 244);
   --white: rgb(254, 232, 235);
-  --veryLightPink: #FCD8DE;
-  --lightPink: #FEC4D2;
-  --pink: #FEB7C3;
+  --veryLightPink: #fcd8de;
+  --lightPink: #fec4d2;
+  --pink: #feb7c3;
   --darkPink: #d84e65;
   --veryDarkPink: #972c3e;
   --pinkFontColor: #0d0103;
@@ -28,7 +28,7 @@ body {
 }
 
 html {
-  scroll-padding-top: 6rem; 
+  scroll-padding-top: 6rem;
   scroll-behavior: smooth;
 }
 
@@ -45,7 +45,7 @@ html {
 .section-title {
   text-align: left;
   font-size: 2rem;
-  margin-bottom: 0px !important;
+  margin-bottom: 20px;
   font-family: "Zain", serif;
   color: var(--darkPink);
 }
@@ -63,4 +63,3 @@ html {
   z-index: 1000;
   align-items: center;
 }
-

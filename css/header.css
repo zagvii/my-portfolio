@@ -1,133 +1,132 @@
 /* Header - Nav Buttons */
 
 header {
-    height: 2rem;
-    color: var(--darkPink);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    max-width: 100%;
-    z-index: 1000;
-    padding: 2rem 5rem;
-    background-color: transparent;
-  }
-  
-  header .spacing {
-    flex-grow: 1;
-  }
-  
-  header.scrolled {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    background-color: white;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-  }
+  height: 2rem;
+  color: var(--darkPink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 1000;
+  padding: 2rem 5rem;
+  background-color: transparent;
+}
 
-  header nav {
-    position: relative; 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px; 
-    box-sizing: border-box;
-  }
+header .spacing {
+  flex-grow: 1;
+}
 
+header.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+header nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.rightAlign {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  position: relative;
+  color: var(--darkPink);
+  text-decoration: none;
+  font-family: "Zain", serif;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--veryDarkPink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--veryDarkPink);
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.resume-button-header {
+  background-color: var(--darkPink);
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Zain", serif;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button-header:hover {
+  background-color: var(--veryDarkPink);
+}
+
+.selectLanguage {
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 7px;
+  border: 2px solid var(--darkPink);
+  color: var(--darkPink);
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-  }
-
-  .rightAlign {
-    position: absolute;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
   }
 
   nav ul li {
-    list-style: none;
-  }
-  
-  nav ul li a {
-    position: relative;
-    color: var(--darkPink);;
-    text-decoration: none;
-    font-family: "Zain", serif;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
-    transition: color 0.2s ease;
-  }
-  
-  nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    background-color: var(--veryDarkPink);;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    margin-left: 10px;
   }
 
-  nav ul li a:hover {
-    color: var(--veryDarkPink);;
+  header {
+    justify-content: flex-end;
   }
-  
-  nav ul li a:hover::after {
-    transform: scaleX(1);
-  }
-  
-  .resume-button-header {
-    background-color: var(--darkPink);;
-    color: white;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-family: "Zain", serif;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .resume-button-header:hover {
-    background-color: var(--veryDarkPink);;
-  }  
-
-  .selectLanguage {
-    background-color: transparent;
-    border-radius: 20px;
-    padding: 7px;
-    border: 2px solid var(--darkPink);;
-    color: var(--darkPink);;
-    font-weight: bold;
-  } 
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: row;
-      justify-content: flex-end;
-      width: 100%;
-    }
-  
-    nav ul li {
-      margin-left: 10px;
-    }
-  
-    header {
-      justify-content: flex-end;
-    }
-  }
-  
+}

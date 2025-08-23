@@ -33,13 +33,12 @@ function Home() {
             <div className="timeline">
                 <ul>
                     {experiencesData.map((experiencesItem) => (
-                        <li key={experiencesItem.id}>
-                            <div className="timeline-item">
-                                <div className="timeline-dot"></div>
-                                <div className="timeline-content">
-                                    <h3 className="timeline-title">{experiencesItem.Time} | {experiencesItem.Title}</h3>
-                                    <p className="timeline-description">{experiencesItem.Description}</p>
-                                </div>
+                        <li key={experiencesItem.id} className="timeline-item">
+                            <div className="timeline-dot"></div>
+                            <div className="timeline-content">
+                                <h6>{experiencesItem.Time}</h6>
+                                <h3 className="timeline-title">{experiencesItem.Title}</h3>
+                                <p className="timeline-description">{experiencesItem.Description}</p>
                             </div>
                         </li>
                     ))}
