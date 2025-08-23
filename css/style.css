@@ -6,9 +6,12 @@
   --darkestRedColor: #0f0909;
   --lightWhite: rgb(254, 242, 244);
   --white: rgb(254, 232, 235);
-  --lightPink: #FCD8DE;
-  --pink: #FEC4D2;
-  --darkPink: #FEB7C3;
+  --veryLightPink: #FCD8DE;
+  --lightPink: #FEC4D2;
+  --pink: #FEB7C3;
+  --darkPink: #d84e65;
+  --veryDarkPink: #972c3e;
+  --pinkFontColor: #0d0103;
 }
 
 * {
@@ -19,7 +22,7 @@
 
 body {
   font-family: "Be Vietnam", sans-serif;
-  color: var(--darkPink);
+  color: var(--pink);
   overflow-x: hidden;
   background-color: var(--white);
 }
@@ -42,9 +45,9 @@ html {
 .section-title {
   text-align: left;
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 0px !important;
   font-family: "Zain", serif;
-  color: var(--redMainColor);
+  color: var(--darkPink);
 }
 
 /* Nav Circles (Not used anymore) */

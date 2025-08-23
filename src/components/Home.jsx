@@ -2,16 +2,16 @@ import React from 'react';
 import '../../css/Home.css'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import { useTranslation } from "react-i18next";
+
 function Home() {
+  const { t } = useTranslation();
+  
   return (
     <section className="home-page" id="home-page">
       <div className="text-block">
-          <h1>Hi, I'm <span className="name">Mirian_</span></h1>
-          <p>
-            Hi, there! My name is Mirian Moreira and I’m a Full Stack Developer
-            based in Latin America. I’m very passionate in Front-end Development
-            and I love creating sophisticated and efficient Web Designs.
-          </p>
+          <h1>{t("introduction")}<span className="name">Mirian_</span></h1>
+          <p>{t("resume")}</p>
           <div className="socials">
             <a href="https://www.linkedin.com/in/zagvii" target="_blank" className="social-link">
               <i className="fa-brands fa-linkedin"></i>

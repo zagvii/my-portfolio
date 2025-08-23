@@ -34,25 +34,19 @@ function Education() {
                 <ul className="education-list">
                     {educationData.map((educationItem) => (
                         <li className='education-item' key={educationItem.id}>
+                            <img src="" alt="" />
                             <a 
                                 href={educationItem.Link} 
                                 target="_blank" 
-                                data-aos="fade-up" 
-                                data-aos-delay="0"
-                                className="education-card" 
-                                style={{
-                                    backgroundImage: `url('${import.meta.env.BASE_URL}assets/${educationItem.Image}')`,
-                                }}>
-                                <div className="overlay" />
-                                <div className="edu-content">
-                                    <div className="edu-title-div">
-                                        <h3 className="edu-title">{educationItem.Major}</h3>
-                                        {/* <i className="fa-solid fa-laptop-code edu-icon"></i> */}
+                                className="education-card" >
+                                    <img src={`${import.meta.env.BASE_URL}assets/${educationItem.Image}`} alt="" />
+                                    <div className="edu-content">
+                                        <div className="edu-title-div">
+                                            <h3 className="edu-title">{educationItem.Major}</h3>
+                                        </div>
+                                        <span className="edu-time"><i className="fa-regular fa-clock"/>{educationItem.Time}</span>
+                                        <p className="edu-school"><i className="fa-solid fa-school"/>{educationItem.School}</p>
                                     </div>
-                                    <hr/>
-                                    <span className="edu-time"><i className="fa-regular fa-clock"/>{educationItem.Time}</span>
-                                    <p className="edu-school"><i className="fa-solid fa-school"/>{educationItem.School}</p>
-                                </div>
                             </a>
                         </li>
                     ))}

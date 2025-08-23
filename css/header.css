@@ -2,7 +2,7 @@
 
 header {
     height: 2rem;
-    color: #d84e65;
+    color: var(--darkPink);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ header {
     max-width: 100%;
     z-index: 1000;
     padding: 2rem 5rem;
-    background-color: none;
+    background-color: transparent;
   }
   
   header .spacing {
@@ -58,7 +58,7 @@ header {
   
   nav ul li a {
     position: relative;
-    color: #d84e65;
+    color: var(--darkPink);;
     text-decoration: none;
     font-family: "Zain", serif;
     font-weight: bold;
@@ -74,14 +74,14 @@ header {
     bottom: 0;
     height: 2px;
     width: 100%;
-    background-color: #972c3e;
+    background-color: var(--veryDarkPink);;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
   }
 
   nav ul li a:hover {
-    color: #972c3e;
+    color: var(--veryDarkPink);;
   }
   
   nav ul li a:hover::after {
@@ -89,7 +89,7 @@ header {
   }
   
   .resume-button-header {
-    background-color: #d84e65;
+    background-color: var(--darkPink);;
     color: white;
     padding: 6px 12px;
     border: none;
@@ -102,15 +102,15 @@ header {
   }
   
   .resume-button-header:hover {
-    background-color: #972c3e;
+    background-color: var(--veryDarkPink);;
   }  
 
   .selectLanguage {
     background-color: transparent;
     border-radius: 20px;
     padding: 7px;
-    border: 2px solid #d84e65;
-    color: #d84e65;
+    border: 2px solid var(--darkPink);;
+    color: var(--darkPink);;
     font-weight: bold;
   } 
   

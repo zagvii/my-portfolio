@@ -25,13 +25,13 @@
 }
 
 .text-block h1 {
-    color: #cbb6b3;
+    color: var(--pink);
     font-family: "Poppins", sans-serif;
     font-size: 2.5rem;
 }
 
 .text-block h1 .name {
-    color: var(--redMainColor);
+    color: var(--darkPink);
 }  
 
 .text-block h2 {
@@ -42,7 +42,7 @@
 .text-block p {
     line-height: normal;
     font-size: 16px;
-    color: #cbb6b3;
+    color: var(--darkPink);
 }
 
 .picture-block {
@@ -127,7 +127,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--redMainColor);
+    color: var(--darkPink);
     text-decoration: none;
     font-size: 20px;
     transition: opacity 0.3s ease;
