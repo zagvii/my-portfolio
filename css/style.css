@@ -4,6 +4,15 @@
   --blackFontColor: #0f0002;
   --backgroundColor: #ede9e7;
   --darkestRedColor: #0f0909;
+  --lightWhite: rgb(254, 242, 244);
+  --white: rgb(254, 232, 235);
+  --veryLightPink: #fcd8de;
+  --lightPink: #fec4d2;
+  --pink: #feb7c3;
+  --darkPink: #d84e65;
+  --veryDarkPink: #972c3e;
+  --pinkFontColor: #0d0103;
+  --pinkWhiteFont: #fdf4f5;
 }
 
 * {
@@ -14,17 +23,21 @@
 
 body {
   font-family: "Be Vietnam", sans-serif;
-  color: #cbb6b3;
+  color: var(--pink);
   overflow-x: hidden;
-  background-color: var(--darkestRedColor);
+  background: var(--darkestRedColor);
 }
 
 html {
-  scroll-padding-top: 6rem; 
+  scroll-padding-top: 6rem;
   scroll-behavior: smooth;
 }
 
 /* About Me Page */
+
+.about-me-section {
+  margin: 3rem 0;
+}
 
 .about-me-section,
 .education-section,
@@ -37,9 +50,9 @@ html {
 .section-title {
   text-align: left;
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-family: "Zain", serif;
-  color: var(--redMainColor);
+  color: var(--veryDarkPink);
 }
 
 /* Nav Circles (Not used anymore) */
@@ -55,4 +68,3 @@ html {
   z-index: 1000;
   align-items: center;
 }
-

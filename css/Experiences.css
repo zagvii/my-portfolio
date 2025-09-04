@@ -1,57 +1,88 @@
-
 /* Job Experiences Timeline */
 
 .timeline {
-    position: relative;
-    padding-left: 30px;
-  }
-  
-  .timeline li {
-    list-style-type: none;
-  }
-  
-  .timeline::before {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: var(--redMainColor);
-  }
-  
-  .timeline-item {
-    position: relative;
-    margin-bottom: 50px;
-  }
-  
-  .timeline-dot {
-    position: absolute;
-    left: -28.5px;
-    top: 10px;
-    width: 14px;
-    height: 14px;
-    background-color: var(--redMainColor);
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px var(--redMainColor);
-  }
-  
-  .timeline-content {
-    padding-left: 10px;
-  }
-  
-  .timeline-title {
-    font-size: 28px;
-    line-height: 30px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-family: "Zain", serif;
-  }
-  
-  .timeline-description {
-    font-size: 16px;
-    color: #666;
-    max-width: 100%;
-    text-align: justify;
-  }
-  
+  position: relative;
+}
+
+.timeline li {
+  list-style-type: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--darkPink);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 3px solid var(--darkPink);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -8px;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  line-height: 30px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: "Zain", serif;
+  color: var(--darkPink);
+}
+
+.timeline-item h6 {
+  color: var(--pink);
+  font-size: 0.95rem;
+  font-family: "Zain", serif;
+}
+
+.timeline-description {
+  font-size: 0.85rem;
+  color: var(--pinkWhiteFont);
+  max-width: 100%;
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.2);
+  background-color: var(--darkPink);
+}
+
+.timeline-item:hover .timeline-content {
+  opacity: 0.8;
+}

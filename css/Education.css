@@ -7,7 +7,7 @@
   }
   
   .education-section .section-title {
-    color: var(--redMainColor);
+    color: var(--veryDarkPink);
     font-size: 2rem;
     margin-bottom: 40px;
   }
@@ -102,9 +102,10 @@
     gap: 10px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
     line-height: 0.8rem;
-    justify-content: center;
+    justify-content: left;
+    margin-top: 10px;
   }
   
   .edu-school {
@@ -113,12 +114,12 @@
     display: flex;
     gap: 15px;
     line-height: 0.85rem;
-    justify-content: center;
-    text-align: justify;
+    justify-content: left;
+    text-align: left;
   }
   
   .education-section i {
-    color: var(--redMainColor);
+    color: var(--veryDarkPink);
   }
   
   @media (max-width: 768px) {
