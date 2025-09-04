@@ -21,7 +21,7 @@
 
 .resume-text {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--pinkWhiteFont);
   text-align: center;
 }
 

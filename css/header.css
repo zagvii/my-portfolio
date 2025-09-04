@@ -91,12 +91,34 @@ nav ul li a:hover {
 }
 
 .selectLanguage {
-  background-color: transparent;
-  border-radius: 20px;
-  padding: 7px;
-  border: 2px solid var(--veryDarkPink);
-  color: var(--pinkWhiteFont);
-  font-weight: bold;
+    -webkit-appearance: none; 
+    -moz-appearance: none;   
+    appearance: none;         
+
+    background-color: transparent;
+    border: 1px solid var(--veryDarkPink);
+    border-radius: 20px;
+    padding: 8px 32px 8px 12px; 
+    color: var(--veryDarkPink);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.selectLanguage option {
+    background-color: var(--veryDarkPink);
+    color: var(--pinkWhiteFont); 
+}
+
+.rightAlign::after {
+    content: '▼';
+    font-size: 0.7rem;
+    color: var(--veryDarkPink);
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none; 
+    transition: color 0.3s ease;
 }
 
 /* Responsividade */
