@@ -10,7 +10,7 @@ import Experiences from './components/Experiences';
 function App() {
     return (
         <div className="app">
-            <RedDots count={30} />
+            <RedDots />
             <Header />
             <Home />
             <AboutMe />

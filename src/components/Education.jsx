@@ -3,13 +3,19 @@ import '../../css/Education.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useTranslation } from "react-i18next";
 
 function Education() {
 
+    const { t, i18n } = useTranslation();
+
     const [educationData, setEducationData] = useState([]);
 
+    const selectedLang = localStorage.getItem("lang");
+    const fileName = selectedLang == 'en' ? 'education' : 'educacao';
+
     useEffect(() => {
-        fetch(`${import.meta.env.BASE_URL}assets/education.xlsx`)
+        fetch(`${import.meta.env.BASE_URL}assets/${fileName}.xlsx`)
         .then((res) => res.arrayBuffer())
         .then((arrayBuffer) => {
             const workbook = XLSX.read(arrayBuffer, { type: 'array' });
@@ -21,7 +27,7 @@ function Education() {
         .catch((err) => {
             console.error('Erro ao carregar planilha:', err);
         });
-    }, []);
+    }, [i18n.language]);
 
     useEffect(() => {
         AOS.init({ duration: 500 });
@@ -29,9 +35,9 @@ function Education() {
 
     return (
         <section id="education-section" className="education-section">
-            <h2 className="section-title">Education</h2>
+            <h2 className="section-title">{t("education")}</h2>
             <div className="education-columns-container">
-                <ul className="education-list">
+                <ul class="education-list">
                     {educationData.map((educationItem) => (
                         <li className='education-item' key={educationItem.id}>
                             <a 
@@ -50,8 +56,8 @@ function Education() {
                                         {/* <i className="fa-solid fa-laptop-code edu-icon"></i> */}
                                     </div>
                                     <hr/>
-                                    <span className="edu-time"><i className="fa-regular fa-clock"/>{educationItem.Time}</span>
-                                    <p className="edu-school"><i className="fa-solid fa-school"/>{educationItem.School}</p>
+                                    <span className="edu-time"><i class="fa-regular fa-clock"/>{educationItem.Time}</span>
+                                    <p className="edu-school"><i class="fa-solid fa-school"/>{educationItem.School}</p>
                                 </div>
                             </a>
                         </li>

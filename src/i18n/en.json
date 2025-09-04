@@ -1,0 +1,10 @@
+{
+  "aboutMe": "About Me",
+  "education": "Education",
+  "workExperiences": "Work Experiences",
+  "downloadMyCV": "Download my CV",
+  "introduction": "Hi, I'm ",
+  "resume": "Hi, there! My name is Mirian Moreira and I'm a Full Stack Developer based in Latin America. I'm very passionate in Front-end Development and I love creating sophisticated and efficient Web Designs.",
+  "resumeText": "Junior Front-End Developer with 2 years of professional experience in web, mobile, and cross-platform development. Strong foundation in HTML, CSS, JavaScript, PHP, and SQL, with experience building responsive user interfaces and consuming RESTful APIs. Demonstrated ability to solve complex bugs, collaborate in agile teams (SCRUM), and contribute to scalable features across multiple platforms (Web, Android, and iOS). Passionate about clean code, inclusive design, and continuous learning.",
+  "skills": "Skills Set"
+}
