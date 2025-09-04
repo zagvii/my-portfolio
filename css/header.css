@@ -2,7 +2,6 @@
 
 header {
   height: 2rem;
-  color: var(--darkPink);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +40,10 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
+  gap: 30px;
+  background: var(--veryDarkPink);
+  padding: 7px 40px;
+  border-radius: 50px;
 }
 
 .rightAlign {
@@ -58,7 +60,7 @@ nav ul li {
 
 nav ul li a {
   position: relative;
-  color: var(--darkPink);
+  color: var(--pinkWhiteFont);
   text-decoration: none;
   font-family: "Zain", serif;
   font-weight: bold;
@@ -67,29 +69,12 @@ nav ul li a {
   transition: color 0.2s ease;
 }
 
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: var(--veryDarkPink);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
 nav ul li a:hover {
-  color: var(--veryDarkPink);
-}
-
-nav ul li a:hover::after {
-  transform: scaleX(1);
+  color: var(--pink);
 }
 
 .resume-button-header {
-  background-color: var(--darkPink);
+  background-color: var(--veryDarkPink);
   color: white;
   padding: 6px 12px;
   border: none;
@@ -102,15 +87,15 @@ nav ul li a:hover::after {
 }
 
 .resume-button-header:hover {
-  background-color: var(--veryDarkPink);
+  background-color: var(--darkPink);
 }
 
 .selectLanguage {
   background-color: transparent;
   border-radius: 20px;
   padding: 7px;
-  border: 2px solid var(--darkPink);
-  color: var(--darkPink);
+  border: 2px solid var(--veryDarkPink);
+  color: var(--pinkWhiteFont);
   font-weight: bold;
 }
 

@@ -74,7 +74,7 @@
 
 .timeline-description {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--pinkWhiteFont);
   max-width: 100%;
 }
 

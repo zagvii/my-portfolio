@@ -2,13 +2,19 @@ import React, {useState, useEffect} from 'react';
 import '../../css/Experiences.css'; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from "react-i18next";
 
 function Home() {
 
+    const { t, i18n } = useTranslation();
+
     const [experiencesData, setExperiencesData] = useState([]);
 
+    const selectedLang = localStorage.getItem("lang");
+    const fileName = selectedLang == 'en' ? 'experiences' : 'experiencia';
+
     useEffect(() => {
-        fetch(`${import.meta.env.BASE_URL}assets/experiences.xlsx`)
+        fetch(`${import.meta.env.BASE_URL}assets/${fileName}.xlsx`)
         .then((res) => res.arrayBuffer())
         .then((arrayBuffer) => {
             const workbook = XLSX.read(arrayBuffer, { type: 'array' });
@@ -20,7 +26,7 @@ function Home() {
         .catch((err) => {
             console.error('Erro ao carregar planilha:', err);
         });
-    }, []);
+    }, [i18n.language]);
 
     useEffect(() => {
         AOS.init({ duration: 500 });
@@ -29,7 +35,7 @@ function Home() {
 
     return (
         <section id="experiences-section" className="experiences-section">
-            <h2 className="section-title">Work Experiences</h2>
+            <h2 className="section-title">{t("workExperiences")}</h2>
             <div className="timeline">
                 <ul>
                     {experiencesData.map((experiencesItem) => (

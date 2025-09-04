@@ -1,8 +1,10 @@
 {
-  "aboutMe": "SOBRE MIM",
-  "education": "EDUCAÇÃO",
-  "workExperiences": "EXPERIÊNCIA",
+  "aboutMe": "Sobre Mim",
+  "education": "Educação",
+  "workExperiences": "Experiência",
   "downloadMyCV": "Baixe meu currículo",
   "introduction": "Olá, eu sou a ",
-  "resume": "Olá! Meu nome é Mirian Moreira e sou Desenvolvedora Full Stack, com base na América Latina. Sou muito apaixonada por Desenvolvimento Front-end e adoro criar Designs Web sofisticados e eficientes."
+  "resume": "Olá! Meu nome é Mirian Moreira e sou Desenvolvedora Full Stack, com base na América Latina. Sou muito apaixonada por Desenvolvimento Front-end e adoro criar Designs Web sofisticados e eficientes.",
+  "resumeText": "Desenvolvedora Front-End Júnior com 2 anos de experiência profissional em desenvolvimento web, mobile e multiplataforma. Sólida base em HTML, CSS, JavaScript, PHP e SQL, com experiência na construção de interfaces de usuário responsivas e no consumo de APIs RESTful. Habilidade demonstrada para solucionar bugs complexos, colaborar em equipes ágeis (SCRUM) e contribuir para funcionalidades escaláveis em múltiplas plataformas (Web, Android e iOS). Apaixonada por código limpo, design inclusivo e aprendizado contínuo.",
+  "skills": "Habilidades"
 }

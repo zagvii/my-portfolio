@@ -12,6 +12,7 @@
   --darkPink: #d84e65;
   --veryDarkPink: #972c3e;
   --pinkFontColor: #0d0103;
+  --pinkWhiteFont: #fdf4f5;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
   font-family: "Be Vietnam", sans-serif;
   color: var(--pink);
   overflow-x: hidden;
-  background-color: var(--white);
+  background: var(--darkestRedColor);
 }
 
 html {
@@ -33,6 +34,10 @@ html {
 }
 
 /* About Me Page */
+
+.about-me-section {
+  margin: 3rem 0;
+}
 
 .about-me-section,
 .education-section,
@@ -47,7 +52,7 @@ html {
   font-size: 2rem;
   margin-bottom: 20px;
   font-family: "Zain", serif;
-  color: var(--darkPink);
+  color: var(--veryDarkPink);
 }
 
 /* Nav Circles (Not used anymore) */

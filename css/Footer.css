@@ -1,16 +1,15 @@
 .footer {
-  background-color: #0b0606;
+  background-color: #0b0606b4;
   padding: 15px 5rem;
   text-align: center;
   color: #ccc;
   font-family: "Zain", serif;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--redMainColor) 66;
 }
 
 .social-link {
-  color: #c1272d;
+  color: var(--darkPink);
   font-size: 1.2rem;
   line-height: 1.2rem;
   margin: 0 12px;
@@ -19,7 +18,7 @@
 }
 
 .social-link:hover {
-  color: #e04646;
+  color: var(--pink);
   transform: scale(1.1);
 }
 

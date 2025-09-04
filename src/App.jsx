@@ -10,6 +10,7 @@ import Experiences from './components/Experiences';
 function App() {
     return (
         <div className="app">
+            <RedDots />
             <Header />
             <Home />
             <AboutMe />
