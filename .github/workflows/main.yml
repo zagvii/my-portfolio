@@ -40,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Pasta onde o build foi gerado (geralmente 'dist' para Vite)
+          # A pasta de build ('dist') será criada na raiz do projeto
           path: './dist'
 
   # Depois, o trabalho de "deploy" (publicação)
