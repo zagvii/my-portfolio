@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Welcome to the repository of my personal portfolio! This project was crafted to showcase who I am, my experience, education, and the projects I’ve built or contributed to — all with a **custom visual identity** that stands out from the typical tech portfolio design. The color scheme is based on **white and cherry red 🍒**.",
   "main": "index.js",
+  "homepage": "https://zagvii.github.io/my-portfolio/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
