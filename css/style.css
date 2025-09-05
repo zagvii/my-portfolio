@@ -25,7 +25,7 @@ body {
   font-family: "Be Vietnam", sans-serif;
   color: var(--pink);
   overflow-x: hidden;
-  background: var(--darkestRedColor);
+  background: var(--darkPink);
 }
 
 html {
