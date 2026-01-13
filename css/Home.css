@@ -1,10 +1,3 @@
-:root {
-  --bg-dark-bordo: #3b0d24;
-  --text-light: #eedbe6;
-  --accent-magic: #d6b0e0;
-  --gold-old: #c9a86a;
-}
-
 /* Home Page - Info Block */
 
 .home-page {
@@ -24,14 +17,25 @@
   line-height: 2.7rem;
 }
 
-.text-block h1 {
-  color: var(--pinkWhiteFont);
+.typing-header {
+  color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
+  margin: 0;
+  display: inline;
+  word-break: break-word;
+  line-height: 1.2;
 }
 
-.text-block h1 .name {
-  color: var(--veryDarkPink);
+.blinking-cursor {
+  color: #be1a32;
+  font-weight: bold;
+  margin-left: 4px;
+  animation: blink 0.8s step-end infinite;
+}
+
+.text-highlight {
+  color: #be1a32;
 }
 
 .text-block h2 {
@@ -148,4 +152,11 @@
   .picture-block {
     display: none;
   }
+}
+
+/* Typing Effect */
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
 }
