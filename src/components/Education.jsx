@@ -37,7 +37,7 @@ function Education() {
         <section id="education-section" className="education-section">
             <h2 className="section-title">{t("education")}</h2>
             <div className="education-columns-container">
-                <ul class="education-list">
+                <ul className="education-list">
                     {educationData.map((educationItem) => (
                         <li className='education-item' key={educationItem.id}>
                             <a 
@@ -56,8 +56,8 @@ function Education() {
                                         {/* <i className="fa-solid fa-laptop-code edu-icon"></i> */}
                                     </div>
                                     <hr/>
-                                    <span className="edu-time"><i class="fa-regular fa-clock"/>{educationItem.Time}</span>
-                                    <p className="edu-school"><i class="fa-solid fa-school"/>{educationItem.School}</p>
+                                    <span className="edu-time"><i className="fa-regular fa-clock"/>{educationItem.Time}</span>
+                                    <p className="edu-school"><i className="fa-solid fa-school"/>{educationItem.School}</p>
                                 </div>
                             </a>
                         </li>
