@@ -2,9 +2,10 @@ import React, {useState, useEffect} from 'react';
 import '../../css/Experiences.css'; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useTranslation } from "react-i18next";
 
-function Home() {
+function Experiences() {
 
     const { t, i18n } = useTranslation();
 
@@ -35,16 +36,34 @@ function Home() {
 
     return (
         <section id="experiences-section" className="experiences-section">
-            <h2 className="section-title">{t("workExperiences")}</h2>
+            <h2 className="section-title">{t("workExperiences")}<span>.</span></h2>
             <div className="timeline">
                 <ul>
                     {experiencesData.map((experiencesItem) => (
                         <li key={experiencesItem.id} className="timeline-item">
-                            <div className="timeline-dot"></div>
-                            <div className="timeline-content">
-                                <h6>{experiencesItem.Time}</h6>
-                                <h3 className="timeline-title">{experiencesItem.Title}</h3>
-                                <p className="timeline-description">{experiencesItem.Description}</p>
+                            <div className="timeline-item-content">
+                                <h3 className="timeline-item-title">{experiencesItem.Position}</h3>
+                                <div className="timeline-item-subtititle">
+                                    <p className="timeline-item-company"><i className="fa-regular fa-building"/>{experiencesItem.Company}</p>
+                                    <p className="timeline-item-time">
+                                        <span>•</span>
+                                        {experiencesItem.Time}
+                                    </p>
+                                </div>
+                                <p className="timeline-item-description">
+                                    <ul>
+                                        {experiencesItem.Description.split('.').map((descriptionItem) => (
+                                            descriptionItem.trim() && <li key={descriptionItem.id}>{descriptionItem.trim()}</li>
+                                        ))}
+                                    </ul>
+                                </p>
+                                <div className="timeline-item-stack">
+                                    {experiencesItem.Stack.split(',').map((tech, i) => (
+                                    <span key={i} className="timeline-item-stack-item" >
+                                        {tech.trim()}
+                                    </span>
+                                    ))}
+                                </div>
                             </div>
                         </li>
                     ))}
@@ -55,4 +74,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Experiences;

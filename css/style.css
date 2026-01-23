@@ -33,12 +33,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* About Me Page */
-
-.about-me-section {
-  margin: 3rem 0;
-}
-
 .about-me-section,
 .education-section,
 .experiences-section {
@@ -52,10 +46,15 @@ html {
   font-size: 2rem;
   margin-bottom: 20px;
   font-family: "Zain", serif;
-  color: var(--veryDarkPink);
+  color: var(--pinkWhiteFont);
+  margin-bottom: 10px !important;
 }
 
-/* Nav Circles (Not used anymore) */
+.section-title span {
+  color: var(--darkPink);
+  font-size: 2rem;
+  margin-bottom: 10px !important;
+}
 
 .nav-indicator {
   display: flex;

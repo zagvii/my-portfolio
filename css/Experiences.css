@@ -1,88 +1,139 @@
 /* Job Experiences Timeline */
 
+/* General */
+
 .timeline {
   position: relative;
+  margin-top: 1rem;
 }
 
-.timeline li {
-  list-style-type: none;
-}
+/* Timeline Line */
 
-.timeline::before {
+.timeline-item::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background-color: var(--darkPink);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 50px;
-  width: 50%;
-}
-
-.timeline-item:nth-child(odd) {
   left: 0;
-  padding-right: 30px;
-  text-align: right;
+  width: 1px;
+  height: 100%;
+  background-color: #6e6b6b;
+  z-index: 1; 
 }
 
-.timeline-item:nth-child(even) {
-  left: 50%;
-  padding-left: 30px;
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #be1a32;
+  z-index: 2; 
+  transform: scaleY(0);    
+  transform-origin: top;  
+  transition: transform 1.5s ease;
+}
+
+/* Individual Items in Timeline */
+
+.timeline-item, .timeline-item-description ul li {
+  position: relative; 
+  list-style-type: none;
+  font-family: "Zain", serif;
+}
+
+.timeline-item-content {
+  position: relative;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+  padding-left: 2.5rem;
   text-align: left;
 }
 
-.timeline-dot {
-  position: absolute;
-  top: 5px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: var(--white);
-  border: 3px solid var(--darkPink);
-  z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.timeline-item:nth-child(odd) .timeline-dot {
-  right: -8px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot {
-  left: -8px;
-}
-
-.timeline-title {
+.timeline-item-title {
   font-size: 1.5rem;
   line-height: 30px;
   margin-bottom: 5px;
   font-weight: bold;
   font-family: "Zain", serif;
-  color: var(--darkPink);
+  color: var(--pinkWhiteFont);
+  display: flex;
 }
 
-.timeline-item h6 {
-  color: var(--pink);
+.timeline-item-subtititle {
+  display: flex;
+  margin: 10px 0;
+}
+
+.timeline-item-subtititle p {
   font-size: 0.95rem;
   font-family: "Zain", serif;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  color: #6e6b6b;
 }
 
-.timeline-description {
-  font-size: 0.85rem;
-  color: var(--pinkWhiteFont);
+.timeline-item-company i {
+  color: #be1a32 !important;
+}
+
+.timeline-item-company {
+  color: #b7b7b7 !important;
+  align-items: center;
+  line-height: 1rem;
+  margin-right: 10px;
+}
+
+.timeline-item-description {
+  color: #b7b7b7;
   max-width: 100%;
+  text-align: justify;
 }
 
-.timeline-item:hover .timeline-dot {
-  transform: scale(1.2);
-  background-color: var(--darkPink);
+.timeline-item-description ul {
+  display: inline-grid;
+  gap: 5px;
 }
 
-.timeline-item:hover .timeline-content {
-  opacity: 0.8;
+.timeline-item-stack {
+  display: flex; 
+  padding-top: 1rem; 
+  flex-wrap: wrap; 
+  gap: 0.5rem; 
+}
+
+.timeline-item-stack-item {
+  padding: 4px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: '0.05em';
+  font-weight: 500;
+  color: #a3a3a3;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  cursor: default;
+  transition: color 150ms, border-color 150ms;
+}
+
+/* Hover */
+
+.timeline-item-description li::before {
+  content: "•";
+  color: #be1a32; 
+  margin: 0 10px 0 0;
+}
+
+/* .timeline-item:hover .timeline-item-content {
+  opacity: 1;
+} */
+
+.timeline-item:hover::after {
+  transform: scaleY(1);    
+}
+
+.timeline-item-stack-item:hover {
+  color: #fb7185;
+  border: 1px solid rgba(136, 19, 55, 0.5);
 }

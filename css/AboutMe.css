@@ -14,18 +14,6 @@
   margin-top: 3rem;
 }
 
-.about-me-section .section-title {
-  color: var(--pinkWhiteFont);
-  font-size: 2rem;
-  margin-bottom: 10px !important;
-}
-
-.about-me-section .section-title span {
-  color: var(--darkPink);
-  font-size: 2rem;
-  margin-bottom: 10px !important;
-}
-
 .info-title {
   font-size: 1.8rem;
   color:var(--darkPink);
