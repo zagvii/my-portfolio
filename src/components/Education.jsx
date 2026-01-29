@@ -66,14 +66,14 @@ function Education() {
                   className="edu-card-img" 
                   style={{ backgroundImage: `url('${import.meta.env.BASE_URL}assets/${item.Image}')` }}
                 >
-                  <div className="edu-tag">
-                    <span className="edu-status-dot"></span>
-                    {item.School}
+                  <div className="edu-tag-container">
+                    <i className="fa-solid fa-graduation-cap edu-tag-icon"></i>
+                    <a href={item.Link} className="edu-tag-text">{item.School}</a>
                   </div>
                 </div>
 
                 <div className="edu-card-info">
-                  <span className="edu-label">TECNÓLOGO</span>
+                  <span className="edu-label">{item.Type}</span>
                   <h3 className="edu-title">{item.Major}</h3>
                   <span className="bottom-subtitle">
                     <span className="education-card-info">
@@ -81,12 +81,12 @@ function Education() {
                     </span>
 
                     <span className="education-card-info">
-                      <i className="fa-solid fa-location-dot"></i>Canoas, RS
+                      <i className="fa-solid fa-location-dot"></i>{item.City}
                     </span>
                   </span>
 
                   <div className="edu-text">
-                    <p>Foco no desenvolvimento de software de alta performance, arquitetura de sistemas e metodologias ágeis. Estudo aprofundado em estruturas de dados e desenvolvimento Full Stack</p>
+                    <p>{item.Desc}</p>
                   </div>
                 </div>
 

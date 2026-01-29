@@ -44,6 +44,7 @@
 }
 
 .text-block p {
+  margin: 10px 0;
   line-height: normal;
   font-size: 16px;
   color: var(--pinkWhiteFont);
@@ -131,11 +132,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--veryDarkPink);
+  color: #be1a32;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
   transition: opacity 0.3s ease;
   margin: 0px;
+  opacity: 0.7;
 }
 
 .home-page .social-link img {
@@ -145,7 +147,7 @@
 }
 
 .home-page .social-link:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

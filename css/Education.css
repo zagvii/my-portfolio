@@ -10,7 +10,6 @@
   max-width: 700px; 
   margin: 0 auto;
   position: relative;
-  padding-bottom: 60px; 
 }
 
 .edu-slide-container {
@@ -20,7 +19,7 @@
 
 .edu-card-compact {
   display: flex !important; 
-  background: #30070e36;
+  background: rgba(74, 62, 62, 15%);
   border-radius: 5px;
   overflow: hidden;
   min-height: 330px;
@@ -34,6 +33,35 @@
   background-position: center;
   position: relative;
   padding: 20px;
+}
+
+.edu-tag-container {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); 
+  padding: 5px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.edu-tag-icon {
+  color: #e11d48;
+  font-size: 15px;
+}
+
+.edu-tag-text {
+  font-weight: 600;
+  font-size: 0.875rem; 
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .edu-tag {
@@ -73,6 +101,7 @@
   letter-spacing: 1.5px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .edu-title {
@@ -151,6 +180,12 @@
 .edu-dots li.slick-active .dot-line {
   background: var(--edu-pink);
   width: 25px;
+}
+
+/* Hover */
+
+.edu-tag-container:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 768px) {

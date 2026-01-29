@@ -8,18 +8,19 @@
   justify-content: space-between;
 }
 
-.social-link {
-  color: var(--darkPink);
+.footer .social-link {
+  color: #be1a32;
   font-size: 1.2rem;
   line-height: 1.2rem;
   margin: 0 12px;
   transition: all 0.3s ease;
   text-decoration: none;
+    transition: opacity 0.3s ease;
+      opacity: 0.7;
 }
 
-.social-link:hover {
-  color: var(--pink);
-  transform: scale(1.1);
+.footer .social-link:hover {
+  opacity: 1;
 }
 
 .socials {
