@@ -1,134 +1,162 @@
-/* Education Section */
+:root {
+  --edu-dark: #0a0a0a;
+  --edu-card: #121212;
+  --edu-pink: #ff2d55;
+  --edu-gray: #a1a1a1;
+}
 
-.education-section {
-    padding: 60px 30px;
-    position: relative;
-    text-align: center;
-  }
-  
-  .education-section .section-title {
-    color: var(--veryDarkPink);
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  .cherry-top-right,
-  .cherry-bottom-left {
-    position: absolute;
-    width: 60px;
-    z-index: 1;
-  }
-  
-  .cherry-top-right {
-    top: -30px;
-    right: 0;
-  }
-  
-  .cherry-bottom-left {
-    bottom: -30px;
-    left: 0;
-  }
-  
-  .education-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px;
-    max-width: 100%;
-  }
-  
-  .education-item {
-    width: 32.5%;
-  }
-  
-  .education-card {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    overflow: hidden;
-    height: 190px;
-    padding: 25px;
-    display: flex;
-    align-items: flex-end;
-    align-items: flex-start;
-    text-align: center;
-  }
+/* Wrapper do Slider */
+.edu-slider-wrapper {
+  max-width: 700px; 
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 60px; 
+}
 
-  .education-card:hover .overlay{
-    background: rgba(0, 0, 0, 0.75); 
-  }
-  
-  .education-card .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9); 
-    z-index: 1;
-    transition: background 0.4s ease;
-  }
-  
-  .edu-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-  }
-  
-  .edu-title-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .edu-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 0;
-    text-align: center;
-    font-family: "Zain", serif;
-  }
-  
-  .edu-time {
-    font-size: 0.8rem;
-    color: #eee;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    line-height: 0.8rem;
-    justify-content: left;
-    margin-top: 10px;
-  }
-  
-  .edu-school {
-    font-size: 0.85rem;
-    color: #ddd;
-    display: flex;
-    gap: 15px;
-    line-height: 0.85rem;
-    justify-content: left;
-    text-align: left;
-  }
-  
-  .education-section i {
-    color: var(--veryDarkPink);
-  }
-  
-  @media (max-width: 768px) {
-    .education-list {
-      flex-direction: column;
-      align-items: center;
-    }
-    .education-item {
-        max-width: 90%;
-        min-width: 90%;
-    }
-  }  
+.edu-slide-container {
+  outline: none;
+  padding: 10px;
+}
+
+.edu-card-compact {
+  display: flex !important; 
+  background: #30070e36;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 330px;
+  border: none;
+  text-align: left;
+}
+
+.edu-card-img {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 20px;
+}
+
+.edu-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.edu-status-dot {
+  width: 7px; 
+  height: 7px;
+  background: var(--edu-pink);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--edu-pink);
+}
+
+.edu-card-info {
+  flex: 1.2;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  color: var(--pinkWhiteFont);
+  font-family: "Zain", serif;
+}
+
+.edu-label {
+  color: var(--edu-pink);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.edu-title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.bottom-subtitle {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.education-card-info {
+  font-size: 0.75rem;
+  color: #6e6b6b;
+}
+
+.education-card-info i {
+  color: #be1a32;
+  margin-right: 8px;
+}
+
+.edu-text {
+  border-left: 2px solid var(--edu-pink);
+  padding-left: 15px;
+  font-size: 0.9rem;
+  color: var(--edu-gray);
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.edu-ctrl {
+  position: absolute;
+  bottom: 30px;
+  width: 40px; 
+  height: 40px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.edu-ctrl.prev {
+  right: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--edu-gray);
+}
+
+.edu-ctrl.next {
+  right: 30px;
+  background: var(--edu-pink);
+  color: white;
+}
+
+.edu-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 340px;
+  display: flex !important;
+  list-style: none;
+  padding: 0;
+  gap: 8px;
+}
+
+.dot-line {
+  width: 15px; 
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.edu-dots li.slick-active .dot-line {
+  background: var(--edu-pink);
+  width: 25px;
+}
+
+@media (max-width: 768px) {
+  .edu-card-compact { flex-direction: column; }
+  .edu-card-img { height: 180px; flex: none; }
+  .edu-card-info { padding: 25px; }
+  .edu-dots { bottom: -10px; }
+  .edu-ctrl { bottom: -25px; }
+}

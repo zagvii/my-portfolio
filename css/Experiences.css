@@ -9,29 +9,42 @@
 
 /* Timeline Line */
 
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background-color: #6e6b6b;
-  z-index: 1; 
-}
-
+.timeline-item::before,
 .timeline-item::after {
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
+  top: 15px;
   width: 1px;
   height: 100%;
-  background-color: #be1a32;
+  background-color: #222;
+  z-index: 1; 
+}
+
+.timeline-item:nth-child(2)::before,
+.timeline-item:nth-child(2)::after {
+  height: 95% !important;
+}
+
+.timeline-item::after {
+  background-color: #be1a32 !important;
   z-index: 2; 
   transform: scaleY(0);    
   transform-origin: top;  
   transition: transform 1.5s ease;
+}
+
+.timeline-item-dot {
+  position: absolute;
+  left: -4px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #be1a3384;
+  box-shadow: 0 0 15px #be1a3384;
+  z-index: 99;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Individual Items in Timeline */
@@ -44,17 +57,18 @@
 
 .timeline-item-content {
   position: relative;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
   width: 100%;
-  padding-left: 2.5rem;
+  padding-left: 2rem;
   text-align: left;
+}
+
+.timeline-item:first-child {
+  padding-bottom: 2.5rem;
 }
 
 .timeline-item-title {
   font-size: 1.5rem;
   line-height: 30px;
-  margin-bottom: 5px;
   font-weight: bold;
   font-family: "Zain", serif;
   color: var(--pinkWhiteFont);
@@ -77,6 +91,7 @@
 
 .timeline-item-company i {
   color: #be1a32 !important;
+  font-size: small;
 }
 
 .timeline-item-company {
@@ -117,20 +132,31 @@
   transition: color 150ms, border-color 150ms;
 }
 
-/* Hover */
-
-.timeline-item-description li::before {
-  content: "•";
-  color: #be1a32; 
-  margin: 0 10px 0 0;
+.timeline-item-description ol {
+  counter-reset: item;
+  list-style-type: none;
+  gap: 5px;
+  display: grid;
 }
 
-/* .timeline-item:hover .timeline-item-content {
-  opacity: 1;
-} */
+.timeline-item-description li::before {
+  color: #6e6b6b; 
+  content: counter(item, decimal-leading-zero); 
+  counter-increment: item;
+  margin-right: 7px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: bolder;
+}
+
+/* Hover */
+
+.timeline-item:hover .timeline-item-dot {
+    background: #be1a33;
+    box-shadow: 0 0 15px #be1a32;
+}
 
 .timeline-item:hover::after {
-  transform: scaleY(1);    
+  transform: scaleY(1);  
 }
 
 .timeline-item-stack-item:hover {

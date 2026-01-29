@@ -41,6 +41,7 @@ function Experiences() {
                 <ul>
                     {experiencesData.map((experiencesItem) => (
                         <li key={experiencesItem.id} className="timeline-item">
+                            <div class="timeline-item-dot"></div>
                             <div className="timeline-item-content">
                                 <h3 className="timeline-item-title">{experiencesItem.Position}</h3>
                                 <div className="timeline-item-subtititle">
@@ -51,11 +52,11 @@ function Experiences() {
                                     </p>
                                 </div>
                                 <p className="timeline-item-description">
-                                    <ul>
+                                    <ol>
                                         {experiencesItem.Description.split('.').map((descriptionItem) => (
                                             descriptionItem.trim() && <li key={descriptionItem.id}>{descriptionItem.trim()}</li>
                                         ))}
-                                    </ul>
+                                    </ol>
                                 </p>
                                 <div className="timeline-item-stack">
                                     {experiencesItem.Stack.split(',').map((tech, i) => (
