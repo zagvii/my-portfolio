@@ -1,8 +1,9 @@
+import "../../css/Education.css";
+
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 import * as XLSX from "xlsx";
-import "../../css/Education.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -52,9 +53,7 @@ function Education() {
 
   return (
     <section id="education-section" className="education-section">
-      <h2 className="section-title">
-        {t("education")}<span>.</span>
-      </h2>
+      <h2 className="section-title">{t("education")}</h2>
 
       <div className="edu-slider-wrapper">
         <Slider {...settings}>

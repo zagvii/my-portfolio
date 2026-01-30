@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
 import '../../css/Home.css'; 
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
 function Home() {
   const { t } = useTranslation();
-
-  const fullText = t("introduction") + "Mirian";
 
   const useTypingEffect = (text, speed = 100) => {
     const [displayedText, setDisplayedText] = useState("");
@@ -31,7 +28,7 @@ function Home() {
     return displayedText;
   };
 
-  const displayText = useTypingEffect(fullText, 80);
+  const displayText = useTypingEffect(t("introduction") + "Mirian");
 
   const getRenderedText = () => {
     if (displayText.length <= t("introduction").length) {

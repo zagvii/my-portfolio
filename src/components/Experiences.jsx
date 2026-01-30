@@ -1,8 +1,6 @@
-import React, {useState, useEffect} from 'react';
 import '../../css/Experiences.css'; 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+
+import React, {useState, useEffect} from 'react';
 import { useTranslation } from "react-i18next";
 
 function Experiences() {
@@ -29,19 +27,15 @@ function Experiences() {
         });
     }, [i18n.language]);
 
-    useEffect(() => {
-        AOS.init({ duration: 500 });
-    }, []);
-    
 
     return (
         <section id="experiences-section" className="experiences-section">
-            <h2 className="section-title">{t("workExperiences")}<span>.</span></h2>
+            <h2 className="section-title">{t("workExperiences")}</h2>
             <div className="timeline">
                 <ul>
-                    {experiencesData.map((experiencesItem) => (
-                        <li key={experiencesItem.id} className="timeline-item">
-                            <div class="timeline-item-dot"></div>
+                    {experiencesData.map((experiencesItem, i) => (
+                        <li key={i} className="timeline-item">
+                            <div className="timeline-item-dot"></div>
                             <div className="timeline-item-content">
                                 <h3 className="timeline-item-title">{experiencesItem.Position}</h3>
                                 <div className="timeline-item-subtititle">
@@ -51,16 +45,16 @@ function Experiences() {
                                         {experiencesItem.Time}
                                     </p>
                                 </div>
-                                <p className="timeline-item-description">
+                                <div className="timeline-item-description">
                                     <ol>
-                                        {experiencesItem.Description.split('.').map((descriptionItem) => (
-                                            descriptionItem.trim() && <li key={descriptionItem.id}>{descriptionItem.trim()}</li>
+                                        {experiencesItem.Description.split('.').map((descriptionItem, ii) => (
+                                            descriptionItem.trim() && <li key={ii}>{descriptionItem.trim()}</li>
                                         ))}
                                     </ol>
-                                </p>
+                                </div>
                                 <div className="timeline-item-stack">
-                                    {experiencesItem.Stack.split(',').map((tech, i) => (
-                                    <span key={i} className="timeline-item-stack-item" >
+                                    {experiencesItem.Stack.split(',').map((tech, ii) => (
+                                    <span key={ii} className="timeline-item-stack-item" >
                                         {tech.trim()}
                                     </span>
                                     ))}

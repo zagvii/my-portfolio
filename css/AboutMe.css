@@ -1,39 +1,18 @@
-/* About Me - Bloco com colunas */
+/* About Me */
 
-:root {
-  --accent-red: #BE1A32;
-  --glass-surface: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --text-main: #ffffff;
-  --text-dim: rgba(255, 255, 255, 0.5);
+/* Information Texts */
+
+.resume-text {
+  font-size: 0.95rem;
+  text-align: justify;
 }
+
+/* Skills List Container */
 
 .info-block {
   text-align: center;
   width: 100%;
   margin-top: 3rem;
-}
-
-.info-title {
-  font-size: 1.8rem;
-  color:var(--darkPink);
-  font-family: "Zain", serif;
-  text-align: center;
-  margin: 25px 0px;
-}
-
-.resume-text {
-  font-size: 0.95rem;
-  color: var(--pinkWhiteFont);
-  text-align: justify;
-}
-
-:root {
-  --accent-wine: #800020; 
-  --card-bg: #111111;
-  --card-bg-hover: #161616;
-  --text-main: #ffffff;
-  --text-dim: #52525b;
 }
 
 .glass-stack { 
@@ -48,36 +27,6 @@
 .glass-skill-wrapper {
   position: relative;
   width: 14rem;
-}
-
-.glass-experience-tag {
-  position: absolute;
-  top: -12px;
-  right: 10px;
-  background: rgba(15, 15, 15, 0.95);
-  backdrop-filter: blur(12px);
-  padding: 4px 12px;
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-dim);
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  z-index: 5;
-  transition: all 0.3s ease;
-}
-
-.pulse-dot {
-  width: 6px;
-  height: 6px;
-  background: #be1a32;
-  border-radius: 50%;
-}
-
-.glass-skill-wrapper:hover .pulse-dot {
-  box-shadow: 0 0 10px #c32c42;
 }
 
 .glass-card-main {
@@ -96,14 +45,17 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.glass-skill-wrapper:hover .glass-card-main {
-  background: rgba(75, 17, 18, 70%);
+[data-theme='light'] .glass-card-main {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 .glass-icon-container {
   width: 52px;
   height: 52px;
-  background: rgba(75, 17, 18, 0.7);
+  background: var(--redGlassEffect);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -112,19 +64,24 @@
   margin-right: 20px;
 }
 
-.glass-skill-wrapper:hover .glass-icon-container {
-  background: #be1a32;
+[data-theme='light'] .glass-icon-container {
+  background: var(--redMainColor);
+  opacity: 0.8;
 }
 
 .glass-icon-container i {
-  color: #fff;
+  color: var(--fontColor);
   font-size: 1.7rem;
+}
+
+[data-theme='light'] .glass-icon-container i {
+  color: var(--whiteFontColor);
 }
 
 .glass-skill-name {
   font-size: 1.4rem;
   margin: 0;
-  color: #fff;
+  color: var(--fontColor);
   text-align: left;
   display: flex;
   font-family: "Zain", serif;
@@ -139,18 +96,69 @@
   transform: translateY(-50%);
   width: 2px;
   height: 0;
-  background: #be1a32;
+  background: var(--redMainColor);
   transition: height 0.5s ease;
+}
+
+/* Experience Tag */
+
+.glass-experience-tag {
+  position: absolute;
+  top: -12px;
+  right: 10px;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--redMainColor);
+  border-radius: 50%;
+}
+
+[data-theme='light'] .glass-experience-tag {
+  background: var(--redMainColor);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='light'] .pulse-dot {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Hover */
+
+.glass-skill-wrapper:hover .pulse-dot {
+  box-shadow: 0 0 10px #c32c42;
+}
+
+.glass-skill-wrapper:hover .glass-icon-container {
+  background: var(--redMainColor);
+}
+
+[data-theme='light'] .glass-skill-wrapper:hover .glass-icon-container {
+  opacity: 1;
 }
 
 .glass-skill-wrapper:hover .glass-card-main::after {
   height: 40px;
 }
 
-.glass-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: self-start;
+.glass-skill-wrapper:hover .glass-card-main {
+  background: var(--darkRedGlassEffect);
 }
 
+[data-theme='light'] .glass-skill-wrapper:hover .glass-card-main {
+  background: rgba(250, 209, 209, 0.897);
+}

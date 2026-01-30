@@ -27,7 +27,7 @@
 }
 
 .timeline-item::after {
-  background-color: #be1a32 !important;
+  background-color: var(--redMainColor) !important;
   z-index: 2; 
   transform: scaleY(0);    
   transform-origin: top;  
@@ -71,7 +71,6 @@
   line-height: 30px;
   font-weight: bold;
   font-family: "Zain", serif;
-  color: var(--pinkWhiteFont);
   display: flex;
 }
 
@@ -86,23 +85,23 @@
   gap: 10px;
   display: flex;
   align-items: center;
-  color: #6e6b6b;
+  color: #878585;
 }
 
 .timeline-item-company i {
-  color: #be1a32 !important;
+  color: var(--redMainColor) !important;
   font-size: small;
 }
 
 .timeline-item-company {
-  color: #b7b7b7 !important;
+  color: var(--softFontColor) !important;
   align-items: center;
   line-height: 1rem;
   margin-right: 10px;
 }
 
 .timeline-item-description {
-  color: #b7b7b7;
+  color: var(--softFontColor);
   max-width: 100%;
   text-align: justify;
 }
@@ -125,7 +124,7 @@
   text-transform: uppercase;
   letter-spacing: '0.05em';
   font-weight: 500;
-  color: #a3a3a3;
+  color: var(--softFontColor);
   border: 1px solid #262626;
   border-radius: 4px;
   cursor: default;
@@ -151,8 +150,8 @@
 /* Hover */
 
 .timeline-item:hover .timeline-item-dot {
-    background: #be1a33;
-    box-shadow: 0 0 15px #be1a32;
+    background: var(--redMainColor);
+    box-shadow: 0 0 15px var(--redMainColor);
 }
 
 .timeline-item:hover::after {

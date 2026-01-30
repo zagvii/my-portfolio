@@ -1,11 +1,5 @@
-:root {
-  --edu-dark: #0a0a0a;
-  --edu-card: #121212;
-  --edu-pink: #ff2d55;
-  --edu-gray: #a1a1a1;
-}
-
 /* Wrapper do Slider */
+
 .edu-slider-wrapper {
   max-width: 700px; 
   margin: 0 auto;
@@ -25,6 +19,12 @@
   min-height: 330px;
   border: none;
   text-align: left;
+}
+
+[data-theme='light'] .edu-card-compact {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 .edu-card-img {
@@ -80,9 +80,9 @@
 .edu-status-dot {
   width: 7px; 
   height: 7px;
-  background: var(--edu-pink);
+  background: var(--redMainColor);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--edu-pink);
+  box-shadow: 0 0 8px var(--redMainColor);
 }
 
 .edu-card-info {
@@ -91,12 +91,11 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  color: var(--pinkWhiteFont);
   font-family: "Zain", serif;
 }
 
 .edu-label {
-  color: var(--edu-pink);
+  color: var(--redMainColor);
   font-size: 0.65rem;
   letter-spacing: 1.5px;
   font-weight: 700;
@@ -122,40 +121,45 @@
 }
 
 .education-card-info i {
-  color: #be1a32;
+  color: var(--redMainColor);
   margin-right: 8px;
 }
 
 .edu-text {
-  border-left: 2px solid var(--edu-pink);
+  border-left: 2px solid var(--redMainColor);
   padding-left: 15px;
   font-size: 0.9rem;
-  color: var(--edu-gray);
+  color: var(--softFontColor);
   line-height: 1.5;
   text-align: justify;
 }
 
 .edu-ctrl {
   position: absolute;
-  bottom: 30px;
+  bottom: 29px;
   width: 40px; 
   height: 40px;
   border: none;
-  border-radius: 14px;
+  border-radius: 8px;
   cursor: pointer;
   z-index: 10;
   transition: 0.3s;
+  opacity: 0.8;
 }
 
 .edu-ctrl.prev {
   right: 80px;
   background: rgba(255, 255, 255, 0.05);
-  color: var(--edu-gray);
+  color: var(--softFontColor);
+}
+
+[data-theme='light'] .edu-ctrl.prev {
+  background: rgb(251, 229, 229);
 }
 
 .edu-ctrl.next {
   right: 30px;
-  background: var(--edu-pink);
+  background: var(--redMainColor);
   color: white;
 }
 
@@ -177,8 +181,12 @@
   transition: 0.3s;
 }
 
+[data-theme='light'] .dot-line {
+  background-color: var(--softFontColor);
+}
+
 .edu-dots li.slick-active .dot-line {
-  background: var(--edu-pink);
+  background: var(--redMainColor);
   width: 25px;
 }
 
@@ -186,6 +194,10 @@
 
 .edu-tag-container:hover {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.edu-ctrl:hover {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
