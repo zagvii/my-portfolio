@@ -23,9 +23,13 @@
     "i18next-locize-backend": "^7.0.4",
     "locize": "^4.0.14",
     "locize-lastused": "^4.0.2",
+    "lucide-react": "^0.562.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-i18next": "^15.6.1",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^12.0.3",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

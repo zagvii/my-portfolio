@@ -1,134 +1,209 @@
-/* Education Section */
+/* Wrapper do Slider */
 
-.education-section {
-    padding: 60px 30px;
-    position: relative;
-    text-align: center;
-  }
-  
-  .education-section .section-title {
-    color: var(--veryDarkPink);
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  .cherry-top-right,
-  .cherry-bottom-left {
-    position: absolute;
-    width: 60px;
-    z-index: 1;
-  }
-  
-  .cherry-top-right {
-    top: -30px;
-    right: 0;
-  }
-  
-  .cherry-bottom-left {
-    bottom: -30px;
-    left: 0;
-  }
-  
-  .education-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px;
-    max-width: 100%;
-  }
-  
-  .education-item {
-    width: 32.5%;
-  }
-  
-  .education-card {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    overflow: hidden;
-    height: 190px;
-    padding: 25px;
-    display: flex;
-    align-items: flex-end;
-    align-items: flex-start;
-    text-align: center;
-  }
+.edu-slider-wrapper {
+  max-width: 700px; 
+  margin: 0 auto;
+  position: relative;
+}
 
-  .education-card:hover .overlay{
-    background: rgba(0, 0, 0, 0.75); 
-  }
-  
-  .education-card .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9); 
-    z-index: 1;
-    transition: background 0.4s ease;
-  }
-  
-  .edu-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-  }
-  
-  .edu-title-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .edu-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 0;
-    text-align: center;
-    font-family: "Zain", serif;
-  }
-  
-  .edu-time {
-    font-size: 0.8rem;
-    color: #eee;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    line-height: 0.8rem;
-    justify-content: left;
-    margin-top: 10px;
-  }
-  
-  .edu-school {
-    font-size: 0.85rem;
-    color: #ddd;
-    display: flex;
-    gap: 15px;
-    line-height: 0.85rem;
-    justify-content: left;
-    text-align: left;
-  }
-  
-  .education-section i {
-    color: var(--veryDarkPink);
-  }
-  
-  @media (max-width: 768px) {
-    .education-list {
-      flex-direction: column;
-      align-items: center;
-    }
-    .education-item {
-        max-width: 90%;
-        min-width: 90%;
-    }
-  }  
+.edu-slide-container {
+  outline: none;
+  padding: 10px;
+}
+
+.edu-card-compact {
+  display: flex !important; 
+  background: rgba(74, 62, 62, 15%);
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 330px;
+  border: none;
+  text-align: left;
+}
+
+[data-theme='light'] .edu-card-compact {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.edu-card-img {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 20px;
+}
+
+.edu-tag-container {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); 
+  padding: 5px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.edu-tag-icon {
+  color: #e11d48;
+  font-size: 15px;
+}
+
+.edu-tag-text {
+  font-weight: 600;
+  font-size: 0.875rem; 
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.edu-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.edu-status-dot {
+  width: 7px; 
+  height: 7px;
+  background: var(--redMainColor);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--redMainColor);
+}
+
+.edu-card-info {
+  flex: 1.2;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-family: "Zain", serif;
+}
+
+.edu-label {
+  color: var(--redMainColor);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.edu-title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.bottom-subtitle {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.education-card-info {
+  font-size: 0.75rem;
+  color: #6e6b6b;
+}
+
+.education-card-info i {
+  color: var(--redMainColor);
+  margin-right: 8px;
+}
+
+.edu-text {
+  border-left: 2px solid var(--redMainColor);
+  padding-left: 15px;
+  font-size: 0.9rem;
+  color: var(--softFontColor);
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.edu-ctrl {
+  position: absolute;
+  bottom: 29px;
+  width: 40px; 
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+.edu-ctrl.prev {
+  right: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--softFontColor);
+}
+
+[data-theme='light'] .edu-ctrl.prev {
+  background: rgb(251, 229, 229);
+}
+
+.edu-ctrl.next {
+  right: 30px;
+  background: var(--redMainColor);
+  color: white;
+}
+
+.edu-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 340px;
+  display: flex !important;
+  list-style: none;
+  padding: 0;
+  gap: 8px;
+}
+
+.dot-line {
+  width: 15px; 
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+[data-theme='light'] .dot-line {
+  background-color: var(--softFontColor);
+}
+
+.edu-dots li.slick-active .dot-line {
+  background: var(--redMainColor);
+  width: 25px;
+}
+
+/* Hover */
+
+.edu-tag-container:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.edu-ctrl:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .edu-card-compact { flex-direction: column; }
+  .edu-card-img { height: 180px; flex: none; }
+  .edu-card-info { padding: 25px; }
+  .edu-dots { bottom: -10px; }
+  .edu-ctrl { bottom: -25px; }
+}

@@ -1,88 +1,164 @@
 /* Job Experiences Timeline */
 
+/* General */
+
 .timeline {
   position: relative;
+  margin-top: 1rem;
 }
 
-.timeline li {
-  list-style-type: none;
-}
+/* Timeline Line */
 
-.timeline::before {
+.timeline-item::before,
+.timeline-item::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background-color: var(--darkPink);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 50px;
-  width: 50%;
-}
-
-.timeline-item:nth-child(odd) {
   left: 0;
-  padding-right: 30px;
-  text-align: right;
+  top: 15px;
+  width: 1px;
+  height: 100%;
+  background-color: #222;
+  z-index: 1; 
 }
 
-.timeline-item:nth-child(even) {
-  left: 50%;
-  padding-left: 30px;
+.timeline-item:nth-child(2)::before,
+.timeline-item:nth-child(2)::after {
+  height: 95% !important;
+}
+
+.timeline-item::after {
+  background-color: var(--redMainColor) !important;
+  z-index: 2; 
+  transform: scaleY(0);    
+  transform-origin: top;  
+  transition: transform 1.5s ease;
+}
+
+.timeline-item-dot {
+  position: absolute;
+  left: -4px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #be1a3384;
+  box-shadow: 0 0 15px #be1a3384;
+  z-index: 99;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Individual Items in Timeline */
+
+.timeline-item, .timeline-item-description ul li {
+  position: relative; 
+  list-style-type: none;
+  font-family: "Zain", serif;
+}
+
+.timeline-item-content {
+  position: relative;
+  width: 100%;
+  padding-left: 2rem;
   text-align: left;
 }
 
-.timeline-dot {
-  position: absolute;
-  top: 5px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: var(--white);
-  border: 3px solid var(--darkPink);
-  z-index: 1;
-  transition: all 0.3s ease;
+.timeline-item:first-child {
+  padding-bottom: 2.5rem;
 }
 
-.timeline-item:nth-child(odd) .timeline-dot {
-  right: -8px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot {
-  left: -8px;
-}
-
-.timeline-title {
+.timeline-item-title {
   font-size: 1.5rem;
   line-height: 30px;
-  margin-bottom: 5px;
   font-weight: bold;
   font-family: "Zain", serif;
-  color: var(--darkPink);
+  display: flex;
 }
 
-.timeline-item h6 {
-  color: var(--pink);
+.timeline-item-subtititle {
+  display: flex;
+  margin: 10px 0;
+}
+
+.timeline-item-subtititle p {
   font-size: 0.95rem;
   font-family: "Zain", serif;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  color: #878585;
 }
 
-.timeline-description {
-  font-size: 0.85rem;
-  color: var(--pinkWhiteFont);
+.timeline-item-company i {
+  color: var(--redMainColor) !important;
+  font-size: small;
+}
+
+.timeline-item-company {
+  color: var(--softFontColor) !important;
+  align-items: center;
+  line-height: 1rem;
+  margin-right: 10px;
+}
+
+.timeline-item-description {
+  color: var(--softFontColor);
   max-width: 100%;
+  text-align: justify;
 }
 
-.timeline-item:hover .timeline-dot {
-  transform: scale(1.2);
-  background-color: var(--darkPink);
+.timeline-item-description ul {
+  display: inline-grid;
+  gap: 5px;
 }
 
-.timeline-item:hover .timeline-content {
-  opacity: 0.8;
+.timeline-item-stack {
+  display: flex; 
+  padding-top: 1rem; 
+  flex-wrap: wrap; 
+  gap: 0.5rem; 
+}
+
+.timeline-item-stack-item {
+  padding: 4px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: '0.05em';
+  font-weight: 500;
+  color: var(--softFontColor);
+  border: 1px solid #262626;
+  border-radius: 4px;
+  cursor: default;
+  transition: color 150ms, border-color 150ms;
+}
+
+.timeline-item-description ol {
+  counter-reset: item;
+  list-style-type: none;
+  gap: 5px;
+  display: grid;
+}
+
+.timeline-item-description li::before {
+  color: #6e6b6b; 
+  content: counter(item, decimal-leading-zero); 
+  counter-increment: item;
+  margin-right: 7px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: bolder;
+}
+
+/* Hover */
+
+.timeline-item:hover .timeline-item-dot {
+    background: var(--redMainColor);
+    box-shadow: 0 0 15px var(--redMainColor);
+}
+
+.timeline-item:hover::after {
+  transform: scaleY(1);  
+}
+
+.timeline-item-stack-item:hover {
+  color: #fb7185;
+  border: 1px solid rgba(136, 19, 55, 0.5);
 }

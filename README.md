@@ -20,14 +20,3 @@ This portfolio is my digital showcase — built with care and attention to desig
 Check out the live version of this portfolio:
 
 [View Portfolio](https://zagvii.github.io/my-portfolio/)
-
-## 💌 Project Structure
-
-```bash
-📂 portfolio/
-├── index.html
-├── style.css
-├── main.js
-├── assets/
-│   └── .../
-└── README.md
