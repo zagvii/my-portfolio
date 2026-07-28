@@ -5,17 +5,24 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  padding: 10rem 5rem;
+  padding: 10rem 4rem;
   gap: 20px;
 }
 
 /* Left Text Block */
 
+.welcome-text {
+  color: var(--redMainColor);
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
 .text-block {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 700px;
+  max-width: 600px;
   line-height: 2.7rem;
 }
 
@@ -48,6 +55,13 @@
   margin: 10px 0;
   line-height: normal;
   font-size: 16px;
+}
+
+.text-block .resume-text {
+  color: #878585;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: start;
 }
 
 /* Socials Icons */

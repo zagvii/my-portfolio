@@ -31,26 +31,35 @@ function Header () {
 
     return (
         <header>
-            <p>PORTFOLIO</p>
-            <label className="switchTheme">
-                <input type="checkbox"onChange={handleThemeChange} checked={theme === 'light'}/>
-                <span className="roundSwitch">
-                    <Moon className="icon-moon" size={16} />
-                    <Sun className="icon-sun" size={16} />
-                </span>
-            </label>
+            <p>Portfolio.</p>
+            <span className="navBar">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Work Experience</a>
+            </span>
+            <span className="switchs">
+                <label className="switchTheme">
+                    <input type="checkbox"onChange={handleThemeChange} checked={theme === 'light'}/>
+                    <span className="roundSwitch">
+                        <Moon className="icon-moon" size={16} />
+                        <Sun className="icon-sun" size={16} />
+                    </span>
+                </label>
 
-            <div className="glass-red-container">
-                <button className={`glass-lang-item ${currentLang === 'pt' ? 'active' : ''}`} onClick={() => handleLanguageChange('pt')} >
-                    <span className="flag-icon">🇧🇷</span>
-                    <span className="lang-text">PT</span>
-                </button>
+                <div className="glass-red-container">
+                    <button className={`glass-lang-item ${currentLang === 'pt' ? 'active' : ''}`} onClick={() => handleLanguageChange('pt')} >
+                        <span className="flag-icon">🇧🇷</span>
+                        <span className="lang-text">PT</span>
+                    </button>
 
-                <button className={`glass-lang-item ${currentLang === 'en' ? 'active' : ''}`} onClick={() => handleLanguageChange('en')} >
-                    <span className="flag-icon">🇺🇸</span>
-                    <span className="lang-text">EN</span>
-                </button>
-            </div>
+                    <button className={`glass-lang-item ${currentLang === 'en' ? 'active' : ''}`} onClick={() => handleLanguageChange('en')} >
+                        <span className="flag-icon">🇺🇸</span>
+                        <span className="lang-text">EN</span>
+                    </button>
+                </div>
+            </span>
+            
         </header>
       );
 }

@@ -10,7 +10,7 @@ header {
   width: 100vw;
   max-width: 100%;
   z-index: 1000;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   background-color: transparent;
 }
 
@@ -28,7 +28,27 @@ header p {
   font-weight: bold;
 }
 
+
+/* Central Nav Bar */
+
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: var(--fontColor);
+}
+
 /* Theme Switch */
+
+.switchs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .switchTheme {
   position: relative;

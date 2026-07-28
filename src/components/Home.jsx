@@ -48,19 +48,27 @@ function Home() {
   return (
     <section className="home-page" id="home-page">
       <div className="text-block">
+          <p class="welcome-text">{t("welcome")}</p>
           <h1 className="typing-header">
             {getRenderedText()}
             <span className="blinking-cursor">|</span>
           </h1>
-          <p>{t("resume")}</p>
-          <div className="socials">
+          <p>{t("oneLineResume")}</p>
+          <p className="resume-text">{t("resume")}</p>
+
+          {/* <div className="socials">
             <a href="https://www.linkedin.com/in/zagvii" target="_blank" className="social-link">
               <i className="fa-brands fa-linkedin"></i>
             </a>
             <a href="https://github.com/zagvii" target="_blank" className="social-link">
               <i className="fa-brands fa-github"></i>
             </a>
+          </div> */}
+
+          <div className="buttons">
+            <button className="btn btn-primary">{t("contactMe")}</button>
           </div>
+
         </div>
         <div className="picture-block">
           <div className="picture-frame">
