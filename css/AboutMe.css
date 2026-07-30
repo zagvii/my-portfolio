@@ -2,9 +2,12 @@
 
 /* Information Texts */
 
-.resume-text {
+.about-me-section .resume-text {
   font-size: 0.95rem;
   text-align: justify;
+  font-weight: 100;
+  color: #878585;
+  width: 60%;
 }
 
 /* Skills List Container */
@@ -15,10 +18,39 @@
   margin-top: 3rem;
 }
 
+.info-block .section-title {
+  margin-bottom: 10px !important;
+}
+
+.skills-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.skills-tabs button {
+  color: #878585;
+  background: transparent;
+  border: none;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-family: "Zain", sans-serif;
+}
+
+.skills-tabs button:hover{
+  background: #760d2b;
+  box-shadow: 0 2px 10px rgba(190,18,60,.45);
+}
+
+.skills-tabs button.active {
+  background: #9f1239;
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(159,18,57,.35), inset 0 1px rgba(255,255,255,.12);
+}
+
 .glass-stack { 
   display: flex; 
   flex-wrap: wrap; 
-  gap: 40px; 
+  gap: 10px; 
   width: 100%;
   justify-content: space-between;
   margin-top: 30px;
@@ -26,7 +58,7 @@
 
 .glass-skill-wrapper {
   position: relative;
-  width: 14rem;
+  width: 13rem;
 }
 
 .glass-card-main {
@@ -52,26 +84,10 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
-.glass-icon-container {
-  width: 52px;
-  height: 52px;
-  background: var(--redGlassEffect);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease;
-  margin-right: 20px;
-}
-
-[data-theme='light'] .glass-icon-container {
-  background: var(--redMainColor);
-  opacity: 0.8;
-}
-
 .glass-icon-container i {
   color: var(--fontColor);
   font-size: 1.7rem;
+  margin-right: 20px;
 }
 
 [data-theme='light'] .glass-icon-container i {
@@ -85,70 +101,12 @@
   text-align: left;
   display: flex;
   font-family: "Zain", serif;
-  margin-top: -5px;
-}
-
-.glass-card-main::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2px;
-  height: 0;
-  background: var(--redMainColor);
-  transition: height 0.5s ease;
-}
-
-/* Experience Tag */
-
-.glass-experience-tag {
-  position: absolute;
-  top: -12px;
-  right: 10px;
-  background: rgba(15, 15, 15, 0.95);
-  backdrop-filter: blur(12px);
-  padding: 4px 12px;
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.5);
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  z-index: 5;
-  transition: all 0.3s ease;
-}
-
-.pulse-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--redMainColor);
-  border-radius: 50%;
-}
-
-[data-theme='light'] .glass-experience-tag {
-  background: var(--redMainColor);
-  color: rgba(255, 255, 255, 0.8);
-}
-
-[data-theme='light'] .pulse-dot {
-  background: rgba(255, 255, 255, 0.8);
 }
 
 /* Hover */
 
 .glass-skill-wrapper:hover .pulse-dot {
   box-shadow: 0 0 10px #c32c42;
-}
-
-.glass-skill-wrapper:hover .glass-icon-container {
-  background: var(--redMainColor);
-}
-
-[data-theme='light'] .glass-skill-wrapper:hover .glass-icon-container {
-  opacity: 1;
 }
 
 .glass-skill-wrapper:hover .glass-card-main::after {
