@@ -3,6 +3,8 @@ import '../../css/Home.css';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
+import { Flower, ArrowRight } from 'lucide-react';
+
 function Home() {
   const { t } = useTranslation();
 
@@ -48,7 +50,7 @@ function Home() {
   return (
     <section className="home-page" id="home-page">
       <div className="text-block">
-          <p class="welcome-text">{t("welcome")}</p>
+          <p class="welcome-text"><Flower size={10} />{t("welcome")}</p>
           <h1 className="typing-header">
             {getRenderedText()}
             <span className="blinking-cursor">|</span>
@@ -66,7 +68,9 @@ function Home() {
           </div> */}
 
           <div className="buttons">
-            <button className="btn btn-primary">{t("contactMe")}</button>
+            <button className="btn btn-primary">{t("contactMe")}
+                <ArrowRight size={18} />
+              </button>
           </div>
 
         </div>

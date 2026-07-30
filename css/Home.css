@@ -13,9 +13,12 @@
 
 .welcome-text {
   color: var(--redMainColor);
-  font-size: 0.8rem !important;
+  font-size: 0.65rem !important;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .text-block {
