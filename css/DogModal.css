@@ -1,0 +1,220 @@
+/* ================================= */
+/* OVERLAY                           */
+/* ================================= */
+
+.dog-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(8, 7, 9, 0.75);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  animation: dogOverlayIn 0.2s ease;
+}
+
+/* ================================= */
+/* MODAL                             */
+/* ================================= */
+
+.dog-modal {
+  position: relative;
+  width: min(470px, 100%);
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #241d21, #181518);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.55);
+  animation: dogModalIn 0.35s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* ================================= */
+/* CLOSE                             */
+/* ================================= */
+
+.dog-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  background: rgba(15, 12, 14, 0.55);
+  backdrop-filter: blur(8px);
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.dog-modal-close:hover {
+  background: var(--redMainColor);
+  color: #fff;
+  transform: rotate(8deg);
+}
+
+/* ================================= */
+/* PHOTO                             */
+/* ================================= */
+
+.dog-photo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.dog-photo-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(24, 21, 24, 0.95));
+  pointer-events: none;
+}
+
+.dog-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.dog-modal:hover .dog-photo-wrapper img {
+  transform: scale(1.03);
+}
+
+/* BADGE */
+
+.dog-secret-badge {
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(159, 18, 57, 0.85);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+/* ================================= */
+/* CONTENT                           */
+/* ================================= */
+
+.dog-modal-content {
+  padding: 8px 30px 30px;
+  text-align: center;
+}
+
+.dog-eyebrow {
+  color: var(--redMainColor);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.dog-modal-content h2 {
+  margin: 8px 0;
+  font-family: "Zain", sans-serif;
+  font-size: 1.8rem;
+  color: var(--fontColor);
+}
+
+.dog-modal-content > p {
+  max-width: 350px;
+  margin: 0 auto;
+  color: #888;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* ================================= */
+/* ACHIEVEMENT                       */
+/* ================================= */
+
+.dog-achievement {
+  margin-top: 24px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-align: left;
+  border-radius: 12px;
+  background: rgba(159, 18, 57, 0.06);
+  border: 1px solid rgba(159, 18, 57, 0.12);
+}
+
+.dog-achievement > i {
+  color: var(--redMainColor);
+  font-size: 1rem;
+}
+
+.dog-achievement div {
+  display: flex;
+  flex-direction: column;
+}
+
+.dog-achievement span {
+  color: #666;
+  font-size: 0.65rem;
+}
+
+.dog-achievement strong {
+  margin-top: 2px;
+  color: #bbb;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* ================================= */
+/* ANIMATION                         */
+/* ================================= */
+
+@keyframes dogOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dogModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================================= */
+/* MOBILE                            */
+/* ================================= */
+
+@media (max-width: 500px) {
+  .dog-photo-wrapper {
+    height: 230px;
+  }
+
+  .dog-modal-content {
+    padding: 8px 22px 25px;
+  }
+}

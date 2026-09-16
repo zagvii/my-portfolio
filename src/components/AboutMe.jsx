@@ -3,11 +3,14 @@ import '../../css/AboutMe.css';
 import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
 
+import ContactModal from "./ContactModal/ContactModal";
+
 function AboutMe() {
 
   const { t } = useTranslation();
 
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const categories = [
     { id: "all", label: "All" },
@@ -153,13 +156,32 @@ function AboutMe() {
 
   return (
     <section className="about-me-section" id="about-me-section">
-      <h2 className="section-title">{t("aboutMe")}</h2>
-      <p className="resume-text">
-        {t("firstLineResumeText")}
-        <br/>
-        <br/>
-        {t("secondLineResumeText")}
-      </p>
+      <div className="about-top">
+        <div className="about-content">
+          <h2 className="section-title">{t("aboutMe")}</h2>
+          <p className="resume-text">
+            {t("firstLineResumeText")}
+            <br />
+            <br />
+            {t("secondLineResumeText")}
+          </p>
+        </div>
+        <div className="about-contact-card">
+          <div className="about-contact-content">
+            <div className="about-contact-icon">
+              <i className="fa-regular fa-paper-plane"></i>
+            </div>
+            <div>
+              <h3>{t("contactCardTitle")}</h3>
+              <p> {t("contactCardText")} </p>
+            </div>
+          </div>
+          <button className="about-contact-button" onClick={() => setIsContactOpen(true)}>
+            <span>{t("letsTalk")}</span>
+            <i className="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
 
       <div className="info-block">
         <h2 className="section-title">{t("skills")}</h2>
@@ -176,6 +198,11 @@ function AboutMe() {
           ))}
         </div>
       </div> 
+
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
     </section>
   );
 }
