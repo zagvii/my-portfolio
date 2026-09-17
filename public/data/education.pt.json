@@ -1,0 +1,32 @@
+[
+    {
+        "Major": "Desenvolvimento de Sistemas",
+        "Type": "Técnico",
+        "School": "IFRS",
+        "City": "Canoas, RS",
+        "Time": "2019 - 2022",
+        "Link": "https://ifrs.edu.br/canoas/no-campus/cursos/curso-tecnico-em-desenvolvimento-de-sistemas-integrado-ao-ensino-medio/",
+        "Desc": "Formação focada no desenvolvimento de sistemas, abrangendo lógica de programação, banco de dados e diversas linguagens para o mercado. O curso une o ensino médio à prática técnica, preparando o aluno para projetar e manter soluções computacionais completas.",
+        "Image": "ifrs.jpeg"
+    },
+    {
+        "Major": "Análise e Desenvolvimento de Sistemas",
+        "Type": "Tecnólogo",
+        "School": "Universidade La Salle",
+        "City": "Canoas, RS",
+        "Time": "2025 - Presente",
+        "Link": "https://graduacao.unilasalle.edu.br/cursos-ead/analise-e-desenvolvimento-de-sistemas",
+        "Desc": "Foco no ciclo de vida do software, desde a análise de requisitos até a manutenção e gestão de dados. Prepara o aluno para criar soluções tecnológicas inovadoras com foco prático e rápido para as demandas do mercado.",
+        "Image": "unilasalle.jpg"
+    },
+    {
+        "Major": "Ciência da Computação",
+        "Type": "Bacharelado",
+        "School": "Unisinos ",
+        "City": "Porto Alegre, RS",
+        "Time": "2026 - Presente",
+        "Link": "https://www.unisinos.br/graduacao/cursos/ciencia-da-computacao/porto-alegre",
+        "Desc": "Formação sólida em fundamentos teóricos e práticos, abrangendo Inteligência Artificial, Ciência de Dados e sistemas complexos. Incentiva a pesquisa, a criatividade e a resolução de problemas de alto nível técnico em ambientes de simulação e inovação.",
+        "Image": "unisinos.jpg"
+    }
+]

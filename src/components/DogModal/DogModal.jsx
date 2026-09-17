@@ -1,11 +1,12 @@
 import "../../../css/DogModal.css";
 
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function DogModal({ isOpen, onClose }) {
+  const { t } = useTranslation();
 
   useEffect(() => {
-
     const handleEscape = (event) => {
       if (event.key === "Escape") {
         onClose();
@@ -34,24 +35,17 @@ function DogModal({ isOpen, onClose }) {
         </button>
 
         <div className="dog-photo-wrapper">
-          <img src={`${import.meta.env.BASE_URL}assets/sunhee.jpeg`} alt="My dog"/>
+          <img src={`${import.meta.env.BASE_URL}assets/myDog.jpeg`} alt="My dog"/>
           <span className="dog-secret-badge">
             <i className="fa-solid fa-paw"></i>
-            SECRET FOUND
+            {t("secret")}
           </span>
         </div>
 
         <div className="dog-modal-content">
-          <span className="dog-eyebrow">
-            WELL, WELL...
-          </span>
-          <h2>
-            Hey, you're curious!
-          </h2>
-          <p>
-            You found the most important member of this
-            portfolio — my little son. 🐶
-          </p>
+          <span className="dog-eyebrow">{t("well")}</span>
+          <h2>{t("curious")}</h2>
+          <p>{t("dogText")}</p>
         </div>
       </div>
     </div>

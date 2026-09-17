@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
 import * as XLSX from "xlsx";
 
+import usePortfolioData from "../hooks/usePortfolioData";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -22,22 +24,13 @@ const PrevArrow = ({ onClick }) => (
 
 function Education() {
   const { t, i18n } = useTranslation();
-  const [educationData, setEducationData] = useState([]);
+  const fileName = i18n.language === "en" ? "education.en.json" : "education.pt.json";
 
-  useEffect(() => {
-    const selectedLang = i18n.language;
-    const fileName = selectedLang === 'en' ? 'education' : 'educacao';
-    
-    fetch(`${import.meta.env.BASE_URL}assets/${fileName}.xlsx`)
-      .then((res) => res.arrayBuffer())
-      .then((arrayBuffer) => {
-        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-        const sheetName = workbook.SheetNames[0];
-        const jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
-        setEducationData(jsonData);
-      })
-      .catch((err) => console.error('Erro:', err));
-  }, [i18n.language]);
+  const {
+    data: educationData,
+    loading,
+    error
+  } = usePortfolioData(fileName);
 
   const settings = {
     dots: true,
@@ -53,104 +46,41 @@ function Education() {
 
   return (
     <section id="education-section" className="education-section">
-      <h2 className="section-title">{t("education")}</h2>
-      <div className="education-container">
-
-        <div className="education-left">
-          <div className="edu-slider-wrapper">
-            <Slider {...settings}>
-              {educationData.map((item) => (
-                <div key={item.id} className="edu-slide-container">
-                  <div className="edu-card">
-
-                    {/* Imagem */}
-                    <div className="edu-card-background">
-                      <img
-                        src={`${import.meta.env.BASE_URL}assets/${item.Image}`}
-                        alt={item.School}
-                      />
-                    </div>
-
-                    {/* Overlay */}
-                    <div className="edu-card-overlay"></div>
-
-                    {/* Conteúdo */}
-                    <div className="edu-card-content">
-
-                      <span className="edu-label">
-                        {item.Type}
-                      </span>
-
-                      <h3 className="edu-title">
-                        {item.Major}
-                      </h3>
-
-                      <div className="edu-meta">
-
-                        <span>
-                          <i className="fa-regular fa-calendar"></i>
-                          {item.Time}
-                        </span>
-
-                        <span>
-                          <i className="fa-solid fa-location-dot"></i>
-                          {item.City}
-                        </span>
-
-                      </div>
-
-                      <p className="edu-description">
-                        {item.Desc}
-                      </p>
-
-                      <a
-                        href={item.Link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="edu-school"
-                      >
-                        {item.School}
-                      </a>
-
-                    </div>
-
-                  </div>
+      <div className="education-header">
+        <span className="education-eyebrow">
+          {t("education")}
+        </span>
+        <h2 className="section-title">
+          {t("education")}
+        </h2>
+        <p className="education-subtitle">
+          {t("educationSubtitle")}
+        </p>
+      </div>
+      <div className="edu-slider-wrapper">
+        <Slider {...settings}>
+          {educationData.map((item) => (
+            <div key={item.id} className="edu-slide-container">
+              <div className="edu-card">
+                <div className="edu-card-background">
+                  <img src={`${import.meta.env.BASE_URL}assets/${item.Image}`} alt={item.School}/>
                 </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-        <div className="education-right">
-          <div className="education-side-card">
-
-            <div className="side-icon">
-                <i className="fa-brands fa-github"></i>
+                <div className="edu-card-overlay"></div>
+                <div className="edu-card-content">
+                  <span className="edu-label">{item.Type}</span>
+                  <h3 className="edu-title">{item.Major}</h3>
+                  <div className="edu-meta">
+                    <span>{item.Time}</span>
+                    <span className="edu-meta-dot">•</span>
+                    <span>{item.City}</span>
+                  </div>
+                  <p className="edu-description">{item.Desc}</p>
+                  <a href={item.Link} target="_blank" rel="noreferrer" className="edu-school">{item.School}</a>
+                </div>
+              </div>
             </div>
-
-            <span className="side-label">
-                OPEN SOURCE
-            </span>
-
-            <h3>Projects Repository</h3>
-
-            <p>
-                Explore my personal projects, source code and experiments.
-                Discover how I build solutions using modern web technologies.
-            </p>
-
-            <a
-                href="https://github.com/zagvii"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="side-button"
-            >
-                <span>Browse GitHub</span>
-
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-
-          </div>
-        </div>
+          ))}
+        </Slider>
       </div>
     </section>
   );

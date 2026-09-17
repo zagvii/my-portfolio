@@ -1,0 +1,26 @@
+[
+  {
+    "Company": "Conquest One",
+    "Stack": "JSP, Java, JavaScript, VPN Client, WinSCP, PuTTY",
+    "Position": "Software Development Analyst",
+    "Description": "Development of full-stack functionalities in JSP environments, combining back-end services in Java with front-end interactivity in JavaScript to meet specific workflows in the construction and engineering sectors. Supervision of secure implementations and server maintenance in clients' on-premise infrastructure, using VPN Client, WinSCP and PuTTY. Assurance of system stability, rigorous version control and agile application of hotfixes when necessary.",
+    "Time": "April, 2026 - Present",
+    "Location": "Porto Alegre, RS - Brazil"
+  },
+  {
+    "Company": "Target IT",
+    "Stack": "Lavavel, ReactJS, Azure, API, Webservices, Postman",
+    "Position": "Software Developer",
+    "Description": "Built scalable fiscal and financial web apps using Laravel and ReactJS. Designed and integrated REST APIs and Webservices with external ERPs. Implemented complex business logic for supplier portals and enterprise solutions.",
+    "Time": "December, 2025 - Present",
+    "Location": "Porto Alegre, RS - Brazil"
+    },
+  {
+    "Company": "Diário Escola",
+    "Stack": "HTML, CSS, JavaScript, PHP, Java, Objective C, SCRUM, Miro, API, Postman, Swagger, Confluence, Jira",
+    "Position": "Junior Software Developer",
+    "Description": "Developed and maintained Web, Android (Java), and iOS (Objective-C) applications. Built responsive layouts and consumed REST APIs. Defined architecture, database modeling, and business rules for integration projects. Mapped processes and created technical documentation using Miro. Analyzed requirements and planned tasks in a SCRUM environment. Provided technical support for implementation and client assistance.",
+    "Time": "June, 2023 - November, 2025",
+    "Location": "Canoas, RS - Brazil"
+  }
+]

@@ -1,6 +1,6 @@
 import '../../css/AboutMe.css'; 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
 import ContactModal from "./ContactModal/ContactModal";
@@ -22,113 +22,16 @@ function AboutMe() {
     { id: "design", label: "Design" },
   ];
 
-  const year = t("year");
-  const years = t("years");
+  const [technologies, setTechnologies] = useState([]);
 
-  const technologies = [
-    // Front-end
-    {
-      name: "HTML",
-      experience: "4 " + years,
-      icon: "devicon-html5-plain",
-      type: "Front-end",
-      category: "frontend",
-    },
-    {
-      name: "CSS",
-      experience: "4 " + years,
-      icon: "devicon-css3-plain",
-      type: "Front-end",
-      category: "frontend",
-    },
-    {
-      name: "JavaScript",
-      experience: "3 " + years,
-      icon: "devicon-javascript-plain",
-      type: "Front-end",
-      category: "frontend",
-    },
-    {
-      name: "React",
-      experience: "> 1 " + year,
-      icon: "devicon-react-original",
-      type: "Front-end",
-      category: "frontend",
-    },
-
-    // Backend
-    {
-      name: "PHP",
-      experience: "4 " + years,
-      icon: "devicon-php-plain",
-      type: "Back-end",
-      category: "backend",
-    },
-    {
-      name: "Java",
-      experience: "2 " + years,
-      icon: "devicon-java-plain",
-      type: "Back-end / Mobile",
-      category: "backend",
-    },
-    {
-      name: "C",
-      experience: "1 " + year,
-      icon: "devicon-c-plain",
-      type: "Back-end",
-      category: "backend",
-    },
-
-    // Mobile
-    {
-      name: "Objective-C",
-      experience: "1 " + year,
-      icon: "devicon-objectivec-plain",
-      type: "iOS",
-      category: "mobile",
-    },
-
-    // Database
-    {
-      name: "MySQL",
-      experience: "4 " + years,
-      icon: "devicon-mysql-plain",
-      type: "Database",
-      category: "database",
-    },
-
-    // Tools
-    {
-      name: "Git",
-      experience: "3 " + years,
-      icon: "devicon-git-plain",
-      type: "Tools",
-      category: "tools",
-    },
-    {
-      name: "Postman",
-      experience: "2 " + years,
-      icon: "devicon-postman-plain",
-      type: "Tools",
-      category: "tools",
-    },
-
-    // Design
-    {
-      name: "Figma",
-      experience: "1 " + year,
-      icon: "devicon-figma-plain",
-      type: "Design",
-      category: "design",
-    },
-    {
-      name: "Canva",
-      experience: "4 " + years,
-      icon: "devicon-canva-plain",
-      type: "Design",
-      category: "design",
-    },
-  ];
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/skills.json`)
+      .then(response => response.json())
+      .then(data => setTechnologies(data))
+      .catch(error => {
+        console.error("Erro ao carregar skills:", error);
+      });
+  }, []);
 
   const filteredSkills =
     selectedCategory === "all"
@@ -184,7 +87,17 @@ function AboutMe() {
       </div>
 
       <div className="info-block">
-        <h2 className="section-title">{t("skills")}</h2>
+        <div className="skills-header">
+          <span className="skills-eyebrow">
+            {t("skills")}
+          </span>
+          <h2 className="section-title">
+            {t("skills")}
+          </h2>
+          <p className="skills-subtitle">
+            {t("skillsJourney")}
+          </p>
+        </div>
         <div className="skills-tabs">
           {categories.map(category => (
               <button key={category.id} className={selectedCategory === category.id ? "tab active" : "tab" } onClick={() => setSelectedCategory(category.id)} >

@@ -1,39 +1,25 @@
-/* ================================= */
-/* OVERLAY                           */
-/* ================================= */
-
 .dog-modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  background: rgba(8, 7, 9, 0.75);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
   animation: dogOverlayIn 0.2s ease;
 }
 
-/* ================================= */
-/* MODAL                             */
-/* ================================= */
+/* ===================================== */
+/* MODAL                                 */
+/* ===================================== */
 
 .dog-modal {
   position: relative;
   width: min(470px, 100%);
   overflow: hidden;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #241d21, #181518);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.55);
+  border-radius: var(--radius-xl);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-modal);
   animation: dogModalIn 0.35s cubic-bezier(.2, .8, .2, 1);
 }
 
-/* ================================= */
-/* CLOSE                             */
-/* ================================= */
+/* ===================================== */
+/* CLOSE                                 */
+/* ===================================== */
 
 .dog-modal-close {
   position: absolute;
@@ -45,24 +31,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
   border-radius: 50%;
-  background: rgba(15, 12, 14, 0.55);
+  background: rgba(var(--surface-elevated-rgb), 0.75);
   backdrop-filter: blur(8px);
-  color: #ddd;
+  color: var(--text-secondary);
   cursor: pointer;
-  transition: 0.25s;
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
 
 .dog-modal-close:hover {
-  background: var(--redMainColor);
+  background: var(--accent);
   color: #fff;
   transform: rotate(8deg);
 }
 
-/* ================================= */
-/* PHOTO                             */
-/* ================================= */
+/* ===================================== */
+/* PHOTO                                 */
+/* ===================================== */
 
 .dog-photo-wrapper {
   position: relative;
@@ -75,7 +61,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(24, 21, 24, 0.95));
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(var(--surface-elevated-rgb), 0.98)
+    );
   pointer-events: none;
 }
 
@@ -90,7 +81,9 @@
   transform: scale(1.03);
 }
 
-/* BADGE */
+/* ===================================== */
+/* SECRET BADGE                          */
+/* ===================================== */
 
 .dog-secret-badge {
   position: absolute;
@@ -101,18 +94,17 @@
   align-items: center;
   gap: 7px;
   padding: 7px 11px;
-  border-radius: 999px;
-  background: rgba(159, 18, 57, 0.85);
-  backdrop-filter: blur(10px);
+  border-radius: var(--radius-pill);
+  background: rgba(var(--accent-rgb), 0.9);
   color: #fff;
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
 
-/* ================================= */
-/* CONTENT                           */
-/* ================================= */
+/* ===================================== */
+/* CONTENT                               */
+/* ===================================== */
 
 .dog-modal-content {
   padding: 8px 30px 30px;
@@ -120,7 +112,7 @@
 }
 
 .dog-eyebrow {
-  color: var(--redMainColor);
+  color: var(--accent);
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -128,60 +120,22 @@
 
 .dog-modal-content h2 {
   margin: 8px 0;
+  color: var(--text-primary);
   font-family: "Zain", sans-serif;
   font-size: 1.8rem;
-  color: var(--fontColor);
 }
 
 .dog-modal-content > p {
   max-width: 350px;
   margin: 0 auto;
-  color: #888;
+  color: var(--text-muted);
   font-size: 0.85rem;
   line-height: 1.6;
 }
 
-/* ================================= */
-/* ACHIEVEMENT                       */
-/* ================================= */
-
-.dog-achievement {
-  margin-top: 24px;
-  padding: 13px 16px;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  text-align: left;
-  border-radius: 12px;
-  background: rgba(159, 18, 57, 0.06);
-  border: 1px solid rgba(159, 18, 57, 0.12);
-}
-
-.dog-achievement > i {
-  color: var(--redMainColor);
-  font-size: 1rem;
-}
-
-.dog-achievement div {
-  display: flex;
-  flex-direction: column;
-}
-
-.dog-achievement span {
-  color: #666;
-  font-size: 0.65rem;
-}
-
-.dog-achievement strong {
-  margin-top: 2px;
-  color: #bbb;
-  font-size: 0.78rem;
-  font-weight: 500;
-}
-
-/* ================================= */
-/* ANIMATION                         */
-/* ================================= */
+/* ===================================== */
+/* ANIMATION                             */
+/* ===================================== */
 
 @keyframes dogOverlayIn {
   from {
@@ -205,9 +159,9 @@
   }
 }
 
-/* ================================= */
-/* MOBILE                            */
-/* ================================= */
+/* ===================================== */
+/* MOBILE                                */
+/* ===================================== */
 
 @media (max-width: 500px) {
   .dog-photo-wrapper {

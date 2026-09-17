@@ -5,8 +5,11 @@ import { useTranslation } from "react-i18next";
 
 import { Flower, ArrowRight } from 'lucide-react';
 
+import ContactModal from "./ContactModal/ContactModal";
+
 function Home() {
   const { t } = useTranslation();
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const useTypingEffect = (text, speed = 100) => {
     const [displayedText, setDisplayedText] = useState("");
@@ -68,9 +71,10 @@ function Home() {
           </div> */}
 
           <div className="buttons">
-            <button className="btn btn-primary">{t("contactMe")}
-                <ArrowRight size={18} />
-              </button>
+            <button className="btn btn-primary" onClick={() => setIsContactOpen(true)}>
+              {t("contactMe")}
+              <ArrowRight size={18} />
+            </button>
           </div>
 
         </div>
@@ -79,6 +83,11 @@ function Home() {
             <img src={`${import.meta.env.BASE_URL}assets/profile-picture-mini.jpeg`} alt="profile-picture" />
           </div>
         </div>
+
+        <ContactModal
+          isOpen={isContactOpen}
+          onClose={() => setIsContactOpen(false)}
+        />
     </section>
   );
 }

@@ -1,10 +1,11 @@
 import '../../css/Footer.css';
 
 import { useState } from 'react';
+import { useTranslation } from "react-i18next";
 import DogModal from './DogModal/DogModal';
 
 function Footer() {
-
+  const { t } = useTranslation();
   const [isDogModalOpen, setIsDogModalOpen] = useState(false);
 
   return (
@@ -15,9 +16,9 @@ function Footer() {
             <i className="fa-solid fa-paw"></i>
           </button>
           <p> 
-            Some things you'll only find,
+            {t("easterEggFirst")}
             <br />
-            if you look closer...
+            {t("easterEggSecond")}
           </p>
         </div>
 

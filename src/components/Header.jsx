@@ -6,7 +6,7 @@ import { Moon, Sun } from 'lucide-react';
 import { useTranslation } from "react-i18next";
 
 function Header () {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const [theme, toggleTheme] = useThemeSwitch();
     const [currentLang, setCurrentLang] = useState(localStorage.getItem("lang") || "en");
@@ -33,10 +33,10 @@ function Header () {
         <header>
             <p>Portfolio.</p>
             <span className="navBar">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="#experience">Work Experience</a>
+                <a href="#about">{t("aboutMe")}</a>
+                <a href="#skills">{t("skills")}</a>
+                <a href="#education">{t("education")}</a>
+                <a href="#experience">{t("experience")}</a>
             </span>
             <span className="switchs">
                 <label className="switchTheme">

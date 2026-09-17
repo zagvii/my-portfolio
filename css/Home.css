@@ -1,166 +1,223 @@
-/* Home Page */
+/* ===================================== */
+/* HOME                                  */
+/* ===================================== */
 
 .home-page {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100vh;
   padding: 10rem 4rem;
-  gap: 20px;
-}
-
-/* Left Text Block */
-
-.welcome-text {
-  color: var(--redMainColor);
-  font-size: 0.65rem !important;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: space-between;
+  gap: 40px;
 }
 
+/* ===================================== */
+/* TEXT                                  */
+/* ===================================== */
+
 .text-block {
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 600px;
   line-height: 2.7rem;
 }
 
-/* Introduction Typing Text */
+.welcome-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--accent);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.65rem !important;
+  text-transform: uppercase;
+}
 
 .typing-header {
-  color: var(--fontColor);
-  font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
   margin: 0;
   display: inline;
-  word-break: break-word;
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
   line-height: 1.2;
+  word-break: break-word;
 }
 
 .blinking-cursor {
-  color: var(--redMainColor);
-  font-weight: bold;
   margin-left: 4px;
-  animation: blink 0.8s step-end infinite;
+  color: var(--accent);
+  font-weight: bold;
+  animation:
+    blink 0.8s step-end infinite;
 }
 
 .text-highlight {
-  color: var(--redMainColor);
+  color: var(--accent);
 }
-
-/* Resume Text */
 
 .text-block p {
   margin: 10px 0;
-  line-height: normal;
   font-size: 16px;
+  line-height: normal;
 }
 
 .text-block .resume-text {
-  color: #878585;
   margin-top: 0;
   margin-bottom: 30px;
-  text-align: start;
+  color: var(--text-muted);
+  text-align: left;
 }
 
-/* Socials Icons */
+/* ===================================== */
+/* SOCIALS                               */
+/* ===================================== */
 
 .home-page .socials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: wrap;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .home-page .social-link {
+  margin: 0;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--redMainColor);
-  text-decoration: none;
+  color: var(--accent);
   font-size: 24px;
-  transition: opacity 0.3s ease;
-  margin: 0px;
+  text-decoration: none;
   opacity: 0.7;
-}
-
-.home-page .social-link img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
+  transition:
+    opacity var(--transition-normal);
 }
 
 .home-page .social-link:hover {
   opacity: 1;
 }
 
-/* Right Picture Block */
+/* ===================================== */
+/* PROFILE                               */
+/* ===================================== */
 
 .picture-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  width: 320px;
+  height: 320px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .picture-frame {
   position: relative;
-  display: inline-block;
-  padding: 10px;
+  z-index: 1;
+  width: 245px;
+  height: 245px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================================== */
+/* PROFILE ARC 1                         */
+/* ===================================== */
+
+.picture-frame::before {
+  content: "";
+  position: absolute;
+  inset: -13px;
+  border: 1px solid transparent;
+  border-top-color: rgba(var(--accent-rgb), 0.75);
+  border-left-color: rgba(var(--accent-rgb), 0.24);
   border-radius: 50%;
+  transform: rotate(-58deg);
+  pointer-events: none;
+  transition: transform 0.6s ease;
 }
 
-.home-page .picture-frame::before {
+/* ===================================== */
+/* PROFILE ARC 2                         */
+/* ===================================== */
+
+.picture-frame::after {
   content: "";
   position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  left: 0;
-  border-top-left-radius: 90%;
-  z-index: 0;
-  border-top: 1px solid var(--redMainColor);
-  border-left: 1px solid var(--redMainColor);
+  inset: -29px;
+  border: 1px solid transparent;
+  border-right-color: rgba(var(--accent-rgb), 0.38);
+  border-bottom-color: rgba(var(--accent-rgb), 0.12);
+  border-radius: 50%;
+  transform: rotate(38deg);
+  opacity: 0.55;
+  pointer-events: none;
+  transition: transform 0.7s ease, opacity 0.4s ease;
 }
 
-.home-page .picture-frame::after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 16vh;
-  left: 7.3vw;
-  border-bottom-right-radius: 90%;
-  z-index: 0;
-  border-bottom: 1px solid var(--redMainColor);
-  border-right: 1px solid var(--redMainColor);
-}
+/* ===================================== */
+/* PROFILE IMAGE                         */
+/* ===================================== */
 
 .picture-frame img {
-  width: 200px;
-  border-radius: 50%;
-  display: block;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  width: 220px;
+  height: 220px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
 }
 
-/* Responsiveness */
+/* ===================================== */
+/* PROFILE HOVER                         */
+/* ===================================== */
+
+.picture-frame:hover::before {
+  transform: rotate(-25deg);
+}
+
+.picture-frame:hover::after {
+  transform: rotate(22deg);
+  opacity: 0.8;
+}
+
+/* ===================================== */
+/* MOBILE                                */
+/* ===================================== */
 
 @media (max-width: 768px) {
+  .home-page {
+    padding: 8rem 1.5rem 5rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
   .picture-block {
     display: none;
   }
+
+  .typing-header {
+    font-size: 2rem;
+  }
 }
 
-/* Typing Effect */
+
+/* ===================================== */
+/* ANIMATION                             */
+/* ===================================== */
 
 @keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }

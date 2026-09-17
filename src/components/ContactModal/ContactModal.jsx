@@ -4,11 +4,9 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 function ContactModal({ isOpen, onClose }) {
-
   const { t } = useTranslation();
 
   useEffect(() => {
-
     const handleEscape = (event) => {
       if (event.key === "Escape") {
         onClose();
@@ -30,19 +28,10 @@ function ContactModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div
-      className="contact-modal-overlay"
-      onMouseDown={onClose}
-    >
-      <div
-        className="contact-modal"
-        onMouseDown={(event) => event.stopPropagation()}
-      >
-        <button
-          className="contact-modal-close"
-          onClick={onClose}
-          aria-label="Close"
-        >
+    <div className="contact-modal-overlay" onMouseDown={onClose}>
+      <div className="contact-modal" onMouseDown={(event) => event.stopPropagation()}>
+
+        <button className="contact-modal-close" onClick={onClose} aria-label="Close">
           <i className="fa-solid fa-xmark"></i>
         </button>
 
@@ -50,16 +39,9 @@ function ContactModal({ isOpen, onClose }) {
           <div className="contact-modal-icon">
             <i className="fa-regular fa-paper-plane"></i>
           </div>
-          <span className="contact-modal-label">
-            GET IN TOUCH
-          </span>
-          <h2>
-            Let's create something together.
-          </h2>
-          <p>
-            Have a project, opportunity or just want to say hello?
-            Choose the best way to reach me.
-          </p>
+          <span className="contact-modal-label">{t("getInTouch")}</span>
+          <h2>{t("letsCreate")}</h2>
+          <p>{t("contactModalText")}</p>
         </div>
 
         <div className="contact-options">
@@ -80,7 +62,7 @@ function ContactModal({ isOpen, onClose }) {
             </div>
             <div className="contact-option-info">
               <span>LinkedIn</span>
-              <strong>Let's connect</strong>
+              <strong>{t("letsConnect")}</strong>
             </div>
             <i className="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
           </a>
@@ -99,9 +81,7 @@ function ContactModal({ isOpen, onClose }) {
 
         <div className="contact-modal-footer">
           <span className="availability-dot"></span>
-          <span>
-            Open to new opportunities
-          </span>
+          <span>{t("openToNewOpportunities")}</span>
         </div>
       </div>
     </div>

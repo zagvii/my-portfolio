@@ -1,0 +1,26 @@
+[
+  {
+    "Company": "Conquest One",
+    "Stack": "JSP, Java, JavaScript, VPN Client, WinSCP, PuTTY",
+    "Position": "Analista de Desenvolvimento de Software",
+    "Description": "Desenvolvimento de funcionalidades full-stack em ambientes JSP, combinando serviços back-end em Java com interatividade front-end em JavaScript para atender fluxos de trabalho específicos dos setores de construção e engenharia. Supervisão de implantações seguras e manutenção de servidores na infraestrutura on-premise dos clientes, utilizando VPN Client, WinSCP e PuTTY. Garantia da estabilidade do sistema, controle rigoroso de versão e aplicação ágil de hotfixes sempre que necessário.",
+    "Time": "Abr, 2026 - Presente",
+    "Location": "Porto Alegre, RS - Brasil"
+  },
+  {
+    "Company": "Target IT",
+    "Stack": "Lavavel, ReactJS, Azure, API, Webservices, Postman",
+    "Position": "Desenvolvedora de Software",
+    "Description": "Desenvolvimento de soluções fiscais e financeiras escaláveis com Laravel e ReactJS. Design e integração de APIs REST e Webservices com ERPs e plataformas externas. Implementação de regras de negócio complexas para portais de fornecedores e sistemas corporativos.",
+    "Time": "Dezembro, 2025 - Mar, 2026",
+    "Location": "Porto Alegre, RS - Brasil"
+  },
+  {
+    "Company": "Diário Escola",
+    "Stack": "HTML, CSS, JavaScript, PHP, Java, Objective C, SCRUM, Miro, API, Postman, Swagger, Confluence, Jira",
+    "Position": "Desenvolvedora de Software Júnior",
+    "Description": "Desenvolvimento e manutenção de aplicações Web, Android (Java) e iOS (Objective-C). Criação de layouts responsivos e consumo de APIs REST. Definição de arquitetura, modelagem de banco de dados e regras de negócio para projetos de integração. Mapeamento de processos e documentação técnica via Miro. Análise de requisitos e planejamento em ambiente SCRUM. Suporte técnico à implementação e atendimento ao cliente.",
+    "Time": "Junho, 2023 - Novembro, 2025",
+    "Location": "Canoas, RS - Brasil"
+  }
+]

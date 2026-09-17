@@ -1,0 +1,32 @@
+[
+    {
+        "Major": "Systems Development",
+        "Type": "Technician",
+        "School": "IFRS",
+        "City": "Canoas, RS",
+        "Time": "2019 - 2022",
+        "Link": "https://ifrs.edu.br/canoas/no-campus/cursos/curso-tecnico-em-desenvolvimento-de-sistemas-integrado-ao-ensino-medio/",
+        "Desc": "Focus on software and systems development, covering programming logic, data modeling, and testing. It integrates technical training with high school to prepare professionals to build complete technology solutions.",
+        "Image": "ifrs.jpeg"
+    },
+    {
+        "Major": "Systems Analysis and Development",
+        "Type": "Associate’s Degree",
+        "School": "La Salle University",
+        "City": "Canoas, RS",
+        "Time": "2025 - Present",
+        "Link": "https://graduacao.unilasalle.edu.br/cursos-ead/analise-e-desenvolvimento-de-sistemas",
+        "Desc": "Focus on the software lifecycle, from requirements analysis to maintenance and data management. It prepares students to create innovative tech solutions with a fast-paced, practical focus on market demands.",
+        "Image": "unilasalle.jpg"
+    },
+    {
+        "Major": "Computer Science",
+        "Type": "Bachelor’s Degree",
+        "School": "Unisinos ",
+        "City": "Porto Alegre, RS",
+        "Time": "2026 - Present",
+        "Link": "https://www.unisinos.br/graduacao/cursos/ciencia-da-computacao/porto-alegre",
+        "Desc": "Solid foundation in theoretical and practical fundamentals, covering AI, Data Science, and complex systems. It encourages research, creativity, and high-level technical problem-solving within simulation and innovation environments.",
+        "Image": "unisinos.jpg"
+    }
+]

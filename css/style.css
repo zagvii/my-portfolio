@@ -1,28 +1,110 @@
 :root {
-  --redMainColor: #be1a32;
-  --darkRedGlassEffect: rgba(75, 17, 18, 0.68);
-  --lightRedGlassEffect: rgba(194, 179, 179, 0.638);
-  --softGlassEffect: rgba(251, 245, 245, 0.5);
+  /* ===================================== */
+  /* BRAND                                 */
+  /* ===================================== */
 
-  --lightBackgroundColor: #f7f5f5;
-  --darkBackgroundColor: #0f0909;
-  --darkFontColor: #0d0103;
-  --whiteFontColor: #fdf4f5;
-  --softDarkFontColor: #565656;
-  --softWhiteFontColor: #fdf4f5;
+  --accent: #be1a32;
+  --accent-rgb: 190, 26, 50;
+  --accent-hover: #d02643;
+  --accent-dark: #861329;
+  --accent-soft: rgba(var(--accent-rgb), 0.08);
+  --accent-medium: rgba(var(--accent-rgb), 0.16);
+  --accent-border: rgba(var(--accent-rgb), 0.24);
 
-  --backgroundColor: var(--darkBackgroundColor);
-  --fontColor: var(--whiteFontColor);
-  --redGlassEffect: var(--darkRedGlassEffect);
-  --softFontColor: var(--softWhiteFontColor);
+  /* ===================================== */
+  /* BACKGROUNDS                           */
+  /* ===================================== */
+
+  --page-bg: #100c0e;
+  --surface-card: #1b1519;
+  --surface-card-rgb: 27, 21, 25;
+  --surface-elevated: #21191e;
+  --surface-elevated-rgb: 33, 25, 30;
+  --surface-hover: #251a20;
+  --surface-interactive: rgba(255, 255, 255, 0.035);
+
+  /* ===================================== */
+  /* TEXT                                  */
+  /* ===================================== */
+
+  --text-primary: #f7f2f4;
+  --text-secondary: #b4acb0;
+  --text-muted: #81797d;
+  --text-disabled: #625c5f;
+
+  /* ===================================== */
+  /* BORDERS                               */
+  /* ===================================== */
+
+  --border-subtle: rgba(255, 255, 255, 0.065);
+  --border-medium: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(var(--accent-rgb), 0.22);
+
+  /* ===================================== */
+  /* SHADOWS                               */
+  /* ===================================== */
+
+  --shadow-soft: 0 14px 35px rgba(0, 0, 0, 0.14);
+  --shadow-card: 0 18px 45px rgba(0, 0, 0, 0.2);
+  --shadow-modal: 0 30px 90px rgba(0, 0, 0, 0.5);
+
+  /* ===================================== */
+  /* RADIUS                                */
+  /* ===================================== */
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 14px;
+  --radius-pill: 999px;
+
+  /* ===================================== */
+  /* TRANSITIONS                           */
+  /* ===================================== */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-smooth: 0.4s cubic-bezier(.2, .8, .2, 1);
+
+  /* ===================================== */
+  /* COMPATIBILIDADE COM CSS ANTIGO        */
+  /* ===================================== */
+
+  --redMainColor: var(--accent);
+  --backgroundColor: var(--page-bg);
+  --fontColor: var(--text-primary);
+  --softFontColor: var(--text-secondary);
+  --darkRedGlassEffect: var(--accent-medium);
+  --redGlassEffect: var(--accent-medium);
+  --whiteFontColor: #ffffff;
 }
 
-[data-theme='light'] {
-  --backgroundColor: var(--lightBackgroundColor);
-  --fontColor: var(--darkFontColor);
-  --redGlassEffect: var(--lightRedGlassEffect);
-  --softFontColor: var(--softDarkFontColor);
+/* ===================================== */
+/* LIGHT MODE                            */
+/* ===================================== */
+
+[data-theme="light"] {
+  --page-bg: #f7f4f5;
+  --surface-card: #fdfafb;
+  --surface-card-rgb: 253, 250, 251;
+  --surface-elevated: #ffffff;
+  --surface-elevated-rgb: 255, 255, 255;
+  --surface-hover: #f7edf0;
+  --surface-interactive: rgba(var(--accent-rgb), 0.035);
+  --text-primary: #241a1e;
+  --text-secondary: #62595d;
+  --text-muted: #8a8185;
+  --text-disabled: #aaa2a5;
+  --border-subtle: rgba(73, 40, 50, 0.08);
+  --border-medium: rgba(73, 40, 50, 0.12);
+  --shadow-soft: 0 12px 30px rgba(74, 35, 48, 0.05);
+  --shadow-card: 0 18px 40px rgba(74, 35, 48, 0.07);
+  --shadow-modal: 0 30px 90px rgba(74, 35, 48, 0.12);
 }
+
+/* ===================================== */
+/* RESET                                 */
+/* ===================================== */
 
 * {
   margin: 0;
@@ -37,85 +119,139 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--backgroundColor);
-  color: var(--fontColor);
+  background: var(--page-bg);
+  color: var(--text-primary);
   font-family: "Zain", sans-serif;
   overflow-x: hidden;
-  transition: color 0.4s ease;
+  transition: background var(--transition-smooth), color var(--transition-smooth);
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: var(--backgroundColor);
+  background: var(--page-bg);
   z-index: -2;
-  transition: background-color 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: background var(--transition-smooth);
 }
 
-@keyframes contentSwipe {
-  0% {
-    transform: translateX(10px);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+/* ===================================== */
+/* SECTIONS                              */
+/* ===================================== */
 
 .about-me-section,
 .education-section,
 .experiences-section {
-  margin: 3rem 0;
+  margin: 4rem 0;
   padding: 0 4rem;
 }
 
+/* ===================================== */
+/* SECTION TITLES                        */
+/* ===================================== */
+
 .section-title {
-  text-align: left;
+  margin-bottom: 20px;
+  color: var(--text-primary);
   font-size: 2.5rem;
   font-weight: 500;
-  color: var(--fontColor);
-  margin-bottom: 20px;
+  line-height: 1.1;
+  text-align: left;
 }
 
 .section-title::after {
   content: ".";
-  color: var(--redMainColor);
+  color: var(--accent);
 }
 
-.btn{
+/* ===================================== */
+/* SECTION EYEBROWS                      */
+/* ===================================== */
+
+.skills-eyebrow,
+.education-eyebrow,
+.experience-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* ===================================== */
+/* SECTION SUBTITLES                     */
+/* ===================================== */
+
+.skills-subtitle,
+.education-subtitle,
+.experience-header-text>p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* ===================================== */
+/* BUTTONS                               */
+/* ===================================== */
+
+.btn {
   height: 48px;
   padding: 0 48px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  font-size: 16px;
-  letter-spacing: 0.2px;
-  text-decoration: none;
-  transition: 0.35s cubic-bezier(.2,.8,.2,1);
-  cursor: pointer;
-  font-family: "Zain", sans-serif;
   gap: 1rem;
+  border-radius: var(--radius-md);
+  font-family: "Zain", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-normal);
 }
 
-.btn-primary{
+.btn-primary {
   color: #fff;
-  background: #9f1239;
+  background: var(--accent);
   border: none;
-  box-shadow: 0 12px 30px rgba(159,18,57,.35),inset 0 1px rgba(255,255,255,.12);
+  box-shadow:
+    0 10px 25px rgba(var(--accent-rgb), 0.2);
 }
 
-.btn-primary:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(190,18,60,.45);
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 30px rgba(var(--accent-rgb), 0.28);
 }
 
-.btn-primary:active{
-  transform: translateY(-1px);
+.btn-primary:active {
+  transform: translateY(0);
 }
+
+/* ===================================== */
+/* SHARED MODAL OVERLAY                  */
+/* ===================================== */
+
+.contact-modal-overlay,
+.dog-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(8, 6, 8, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ===================================== */
+/* MOBILE                                */
+/* ===================================== */
 
 @media (max-width: 768px) {
   .about-me-section,
@@ -123,7 +259,7 @@ body::before {
   .experiences-section {
     padding: 0 1.5rem;
   }
-  
+
   header {
     padding: 1rem 1.5rem;
   }
