@@ -135,6 +135,12 @@
 /* CONTACT CARD                   */
 /* ============================= */
 
+.about-contact-content,
+.about-contact-button {
+  position: relative;
+  z-index: 2;
+}
+
 .about-contact-card {
   position: relative;
   min-height: 170px;
@@ -142,15 +148,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(145deg, rgba(73, 42, 50, 0.22), rgba(45, 35, 40, 0.18));
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
+  background: linear-gradient(
+    145deg,
+    rgba(73, 42, 50, 0.22),
+    rgba(45, 35, 40, 0.18)
+  );
+  border-radius: 8px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* detalhe vinho no fundo */
+/* brilho vinho */
 
 .about-contact-card::before {
   content: "";
@@ -164,13 +176,37 @@
   opacity: 0.07;
   filter: blur(20px);
   pointer-events: none;
+  z-index: 0;
 }
 
-.about-contact-card:hover {
-  transform: translateY(-4px);
+/* fundo do hover */
+
+.about-contact-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(73, 42, 50, 0.22),
+    rgba(45, 35, 40, 0.28)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+transition: opacity 0.5s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* hover */
+
+/* .about-contact-card:hover {
   border-color: rgba(159, 18, 57, 0.22);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
-}
+} */
+/* 
+.about-contact-card:hover::after {
+  opacity: 1;
+} */
 
 /* conteúdo superior */
 
@@ -180,6 +216,7 @@
   display: flex;
   gap: 17px;
   align-items: flex-start;
+  justify-content: space-between
 }
 
 /* ícone */
@@ -194,7 +231,6 @@
   border-radius: 11px;
   color: var(--redMainColor);
   background: rgba(159, 18, 57, 0.09);
-  border: 1px solid rgba(159, 18, 57, 0.2);
 }
 
 .about-contact-icon i {
@@ -235,8 +271,8 @@
   justify-content: center;
   gap: 12px;
   border-radius: 8px;
-  border: 1px solid rgba(159, 18, 57, 0.14);
-  background: rgba(159, 18, 57, 0.08);
+  border: none;
+  background: var(--redMainColor);
   color: var(--fontColor);
   font-family: "Zain", sans-serif;
   font-size: 0.95rem;
@@ -246,7 +282,7 @@
 }
 
 .about-contact-button i {
-  color: var(--redMainColor);
+  color: var(--fontColor);
   font-size: 0.8rem;
   transition: transform 0.3s ease;
 }

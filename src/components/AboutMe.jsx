@@ -168,12 +168,12 @@ function AboutMe() {
         </div>
         <div className="about-contact-card">
           <div className="about-contact-content">
-            <div className="about-contact-icon">
-              <i className="fa-regular fa-paper-plane"></i>
-            </div>
             <div>
               <h3>{t("contactCardTitle")}</h3>
               <p> {t("contactCardText")} </p>
+            </div>
+            <div className="about-contact-icon">
+              <i className="fa-regular fa-paper-plane"></i>
             </div>
           </div>
           <button className="about-contact-button" onClick={() => setIsContactOpen(true)}>
